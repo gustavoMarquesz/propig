@@ -1,0 +1,132 @@
+.home {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+  }
+  
+.welcome {
+    flex: 1;
+    gap: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+.welcome-text-2 {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+  
+.welcome-text-2 h1 {
+  color: #0d6efd;
+    font-size: 50px;
+  }
+  
+.maquininha {
+    height: 650px;
+  }
+  
+.login-form {
+    width: 900px;
+    color: #fff;
+    background-color: #0d6efd;
+}
+
+.login-form form {
+    gap: 20px;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-form h2 {
+   font-size: 35px;
+}
+
+.login-form input{
+    color: #fff;
+    outline: 0;
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid #fff;
+    background-color: #0d6efd;
+}
+
+::placeholder {
+    color: #fff;
+  }
+
+.login-form button {
+    margin-top: 30px;
+    cursor: pointer;
+    width: 250px;
+    height: 30px;
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    background-color: #0d6efd;
+    transition: 0.8s;
+    font-size: 15px;
+ }
+
+ .login-form button:hover {
+    color: #0d6efd;
+    background-color: #fff;
+ }
+
+
+ .card {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 400px;
+    margin: 0 auto;
+  }
+  
+ .box-rastreio-dois{
+    border-radius: 5px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+ }
+
+ .box-rastreio-dois input{
+    margin-top: 3px;
+    height: 15px;
+    width: 250px;
+    border-radius: 4px;
+    border: 0.5px solid;
+    outline: 0;
+ }
+
+ .box-rastreio-dois form{
+    gap: 10px;
+    display: flex;
+ }
+
+ .box-rastreio-dois button{
+    border: none;
+    cursor: pointer;
+   background-color: transparent;
+ }
+
+ .login-account{
+  cursor: pointer;
+  font-size: 14px;
+ }
+
+ 
+ 
+

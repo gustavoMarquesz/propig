@@ -11,10 +11,6 @@ import adressIcons from "../assets/adressIcons.svg"
 function TimeLine(){
     return(
         <section className="tl">
-            {/*<div className="div-img">
-                <img src={adressIcons}/>
-                <a>voltar a navegar</a>
-            </div>*/}
            <div className="time-line"> 
             <h1>Acompanhe a trajetória do seu produto</h1>
             <h1><span>PROPIG</span></h1>

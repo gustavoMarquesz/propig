@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
+
+
+.tl span{
+    color: #ffcb00;
+}
+
+.tl h1{
+    font-family: 'Arimo', sans-serif;
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    position: relative;
+    justify-content: center;
+}
+
+
+@media  screen and (max-width: 775px) {
+    .tl h1{
+        display: none;
+    }
+    
+}
+
+

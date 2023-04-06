@@ -71,6 +71,7 @@
 }
 
 @media  screen and (max-width: 775px) {
+   
     .tl{
         margin-top: 0px;
     }
@@ -88,8 +89,6 @@
         min-width: 330px;
     }
 
-   
-    
 }
 
 

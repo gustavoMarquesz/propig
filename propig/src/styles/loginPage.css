@@ -129,6 +129,7 @@
   cursor: pointer;
  }
 
+
 @media screen and (max-width: 775px){
   .welcome{
     gap: 1px;

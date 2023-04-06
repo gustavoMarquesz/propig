@@ -8,6 +8,8 @@ import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 
 import adressIcons from "../assets/adressIcons.svg"
 
+
+
 function TimeLine(){
     return(
         <section className="tl">

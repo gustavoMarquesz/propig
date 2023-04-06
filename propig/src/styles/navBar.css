@@ -1,0 +1,29 @@
+.section-nav{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-bar{
+    gap: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ul-navbar{
+    margin-top: 30px;
+    gap: 35px;
+    display: flex;
+    list-style-type: none;
+}
+
+li{
+    cursor: pointer;
+}
+
+nav img{
+    width: 150px;
+    height: 50px;
+}

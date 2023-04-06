@@ -71,9 +71,24 @@
 }
 
 @media  screen and (max-width: 775px) {
-    .tl h1{
+    .tl{
+        margin-top: 0px;
+    }
+    .timeline-header{
         display: none;
     }
+
+    .time-line{
+        width: 330px;
+        border: none;
+    }
+
+    .vertical{
+        border: none;
+        min-width: 330px;
+    }
+
+   
     
 }
 

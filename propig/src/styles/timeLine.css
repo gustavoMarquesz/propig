@@ -1,6 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
 
+.time-line{
+    border-radius: 10px;
+    margin: auto;
+    flex-direction: column;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    width: 1500px;
+    min-height: 800px;
+}
 
+.tl{
+    margin-top: 100px;
+}
 .tl span{
     color: #ffcb00;
 }
@@ -14,11 +29,66 @@
     justify-content: center;
 }
 
+.timeline-header-father{
+    display: flex; 
+    border-bottom: 1px solid black;
+}
+
+.timeline-header-mother{
+    display: flex; 
+}
+
+.timeline-header{
+    display: flex;
+    flex-direction: column;
+}
+
+.header-element{
+    border-right: 1px solid black;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-element-p{
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.header-element-mother{
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.vertical{
+    border-top: 1px solid black;
+    min-width: 1500px;
+}
 
 @media  screen and (max-width: 775px) {
-    .tl h1{
+    .tl{
+        margin-top: 0px;
+    }
+    .timeline-header{
         display: none;
     }
+
+    .time-line{
+        width: 330px;
+        border: none;
+    }
+
+    .vertical{
+        border: none;
+        min-width: 330px;
+    }
+
+   
     
 }
 

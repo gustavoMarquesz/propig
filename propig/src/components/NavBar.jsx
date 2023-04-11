@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import Logo from "../assets/logo.png"
+
 import MenuIcon from '@mui/icons-material/Menu';
 import navBar from "../styles/navBar.css"
 import { Link, useLocation } from "react-router-dom"
@@ -25,7 +26,7 @@ function NavBar(){
                 </div>
                 <div className="other-links"> 
                     <Link className="link" to="/ainda/não/definido">Nossas soluções</Link>
-                    <Link className="link" to="/ainda/não/definido">Dúvidas</Link>
+                    <Link className="link" to="/duvidas">Dúvidas</Link>
                     <Link className="link" to="/ainda/não/definido">Fale conosco</Link>
                 </div>
             </div>

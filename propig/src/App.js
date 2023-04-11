@@ -6,6 +6,7 @@ import NavBar from './components/NavBar';
 
 import {BrowserRouter as Router, Link, Route, Routes, useLocation} from "react-router-dom"
 import AdminTimeLine from './pages/AdminTimeLine';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -18,8 +19,9 @@ function App() {
           <Route path='/register' element={<RegisterPage/>}/>
           <Route path='/acompanhar-pedido' element={<TimeLine/>}/>
           <Route path='/admin-pedido' element={<AdminTimeLine/>}/>
+          <Route path='/admin-pedido' element={<Footer/>}/>
         </Routes>
-
+        <Footer/>
       </Router>
       
     </div>

@@ -132,21 +132,7 @@
   cursor: pointer;
  }
 
- .submit-2{
-  border: none;
-  color: black;
-  height: 50px;
-  width: 300px;
-  background: #ffcb00;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.7s;
- }
-
- .submit-2:hover{
-  color: #fff;
-  background: #0d6efd;
- }
+ 
 
 @media screen and (max-width: 775px){
   .welcome{

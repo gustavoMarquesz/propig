@@ -7,6 +7,7 @@
   right: 0; /* posiciona o botão no canto direito do formulário */
 }
 
+
 .close-btn svg {
   font-size: 24px;
   color: #444;
@@ -20,6 +21,12 @@
   align-items: center;
   height: 100vh;
   background: #035885;
+}
+
+.welcome-text{
+  gap: 40px;
+  display: flex;
+  flex-direction: column;
 }
 
 .login-form-2{

@@ -5,7 +5,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import navBar from "../styles/navBar.css"
 import { Link, useLocation } from "react-router-dom"
 
-function NavBar(){
+function NavBarHomePage(){
 
     const [expandNavbar, setExpandNavbar] = useState(false)
 
@@ -36,4 +36,4 @@ function NavBar(){
 
 }
 
-export default NavBar
+export default NavBarHomePage

@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
 
 .time-line{
+    gap: 30px;
     border-radius: 10px;
     margin: auto;
     flex-direction: column;
@@ -27,7 +28,7 @@
     font-family: 'Arimo', sans-serif;
     display: flex;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 40px;
     position: relative;
     justify-content: center;
 }
@@ -63,6 +64,7 @@
 
 
 .header-element-mother{
+    margin-top: 50px;
     width: 500px;
     display: flex;
     justify-content: center;

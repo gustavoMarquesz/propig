@@ -1,8 +1,11 @@
+
 .home2 {
     display: flex;
   }
   
 .welcome {
+  font-size: 27px;
+    color: #fff;
     flex: 1;
     gap: 40px;
     display: flex;
@@ -34,9 +37,9 @@
     color: rgb(20, 20, 160);
   }
   
-.maquininha1 {
-    width: 400px;
-    height: 400px;
+.maquininha2 {
+    width: 470px;
+    height: 470px;
   }
   
 .login-form {
@@ -128,6 +131,8 @@
   font-size: 11px;
   cursor: pointer;
  }
+
+ 
 
 @media screen and (max-width: 775px){
   .welcome{

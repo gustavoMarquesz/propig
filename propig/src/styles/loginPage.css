@@ -1,202 +1,153 @@
-.home {
-    display: flex;
-  }
-  
-.welcome {
-    flex: 1;
-    gap: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 50px;
-    flex-wrap: wrap;
-  }
-  
-.welcome-text {
-    gap: 20px;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 50px;
-    font-size: 13px;
-    flex-wrap: wrap;
-  }
-  
-.welcome-text h1 {
-    font-size: 40px;
-  }
-
-.prazer {
-    color: #ffcb00;
-  }
-
-.propig {
-    font-weight: bold;
-    color: rgb(20, 20, 160);
-  }
-  
-.maquininha {
-    width: 400px;
-    height: 550px;
-  }
-  
-.login-form {
-    width: 460px;
-    color: #fff;
-    background-color: #0d6efd;
+.close-btn {
+  border-radius: 4px;
+  background-color: #FFD400;
+  margin-top: 0px;
+  position: absolute; /* adiciona posição absoluta ao botão */
+  top: 0; /* posiciona o botão no topo do formulário */
+  right: 0; /* posiciona o botão no canto direito do formulário */
 }
 
-.login-form form {
-    gap: 20px;
-    display: flex;
-    height: 100vh;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-}
 
-.login-form h2 {
-   font-size: 35px;
-}
-
-.login-form input{
-    color: #fff;
-    outline: 0;
-    width: 300px;
-    height: 30px;
-    border: none;
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
-    border-bottom: 1px solid #fff;
-    background-color: #0d6efd;
-}
-
-::placeholder {
-    color: #fff;
-  }
-
-.login-form button {
-    margin-top: 30px;
-    cursor: pointer;
-    width: 250px;
-    height: 30px;
-    color: #fff;
-    border: none;
-    border-radius: 7px;
-    background-color: #0d6efd;
-    transition: 0.8s;
-    font-size: 16px;
- }
-
- .login-form button:hover {
-    color: #0d6efd;
-    background-color: #fff;
- }
-
- .box-rastreio{
-    background-color: #ffcb00;
-    border-radius: 5px;
-    gap: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 120px;
- }
-
- .box-rastreio input{
-    margin-top: 3px;
-    height: 15px;
-    width: 250px;
-    border-radius: 4px;
-    border: 0.5px solid;
-    outline: 0;
- }
-
- .box-rastreio form{
-    gap: 10px;
-    display: flex;
- }
-
- .box-rastreio button{
-    border: none;
-    cursor: pointer;
-   background-color: transparent;
- }
-
- .login-form a{
-  font-size: 13px;
+.close-btn svg {
+  font-size: 24px;
+  color: #444;
   cursor: pointer;
- }
+}
 
-
-@media screen and (max-width: 775px){
-  .welcome{
-    gap: 1px;
-  }
-  .home{
-    flex-direction: column-reverse;
-  }
-
-  .welcome-text{
-    gap: 2px;
-    font-size: 12px;
-    width: 100%;
-  }
-
-  .welcome-text h1{
-    font-size: 35px;
-  }
-
-  .box-rastreio{
-   width: 290px;
- }
-
- .box-rastreio input{
-    margin-top: 3px;
-    height: 15px;
-    width: 130px;
-    border-radius: 4px;
-    border: 0.5px solid;
-    outline: 0;
- }
- .maquininha{
+.wrapper{
   position: relative;
-  margin-right: 90px;
-  width: 230px;
-  height: 230px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #035885;
+}
+
+.welcome-text{
+  gap: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form-2{
+  position: relative;
+  height: 400px;
+  gap: 23px;
+  width: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: aliceblue;
+  border-radius: 13px;
+}
+
+.login-form-2-input{
+  outline: 0;
+  width: 300px;
+  height: 30px;
+  border: none;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 1px solid black;
+  background-color: aliceblue;
+}
+
+.login-form-2 a{
+  color: black;
+  text-decoration: none;
+}
+
+.submit{
+  height: 30px;
+  width: 200px;
+  color: black;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: #FFD400;
+  transition: 0.5s;
+}
+
+.submit-2{
+  font-size: 20px;
+  border: none;
+  color: black;
+  height: 50px;
+  width: 415px;
+  background: #ffcb00;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.7s;
  }
 
- .login-form{
+ .submit-2:hover{
+  color: #fff;
+  background: #0d6efd;
+ }
+
+
+.welcome{
+  margin-bottom: 200px;
+  position: relative;
+}
+
+.submit:hover{
+  color: #fff;
+  background: #035885;
+}
+
+.login-form-2 ::placeholder {
+  color: black;
+}
+
+.son-form{
+  display: flex;
+  width: 320px;
+  justify-content: space-between;
+}
+
+.custom-shape-divider-bottom-1681331361 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
- }  
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
 }
 
-@media screen and (min-width:2000px){
-  .maquininha{
-    margin-right: 90px;
-    width: 630px;
-    height: 630px;
-   }
+.custom-shape-divider-bottom-1681331361 svg {
+  position: relative;
+  display: block;
+  width: calc(130% + 1.3px);
+  height: 300px;
+}
 
-   .welcome-text{
-    font-size: 10px;
-    width: 500px;
-  }
-
-  .login-form{
-    width: 25%;
-   } 
-
+.custom-shape-divider-bottom-1681331361 .shape-fill {
+  fill: #003A58;
 }
 
 
 
+.custom-shape-divider-bottom-1681331603 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
 
+.custom-shape-divider-bottom-1681331603 svg {
+  position: relative;
+  display: block;
+  width: calc(130% + 1.3px);
+  height: 100px;
+}
 
-
-
-
-
- 
-
+.custom-shape-divider-bottom-1681331603 .shape-fill {
+  fill: #FFFFFF;
+}

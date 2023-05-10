@@ -159,12 +159,11 @@ function AdminPage(){
 
                     <div class="sidebar">
                 
-                        <a href="">
+                        <button className="toggle-button" onClick={toggleMode}>
                             <span class="material-symbols-sharp">
                                 <TipsAndUpdatesSharpIcon/></span>
-                            <button onClick={toggleMode}>Mudar tema</button>
-                        </a>
-
+                            <p>Mudar tema</p>
+                        </button>
 
                         <a href="" class="active">
                             <span class="material-symbols-sharp">
@@ -404,13 +403,13 @@ function AdminPage(){
                             </div>
                         </div>
                         
-                        <div class="item add-product">
-                            <div className="add-products">
-                                <span class="material-symbols-sharp"><AddCircleSharpIcon/></span>
-                                <button className="add-button" onClick={handleSelectOpcao}>Adicionar pedido</button>
+                        <div class="item add-product" onClick={handleSelectOpcao}>
+                            <div className="add-button">
+                                <AddCircleSharpIcon/>
+                                <p>Adicionar pedido</p>
                             </div>
                         </div>
-
+                     
                     </div>
             </div>
 

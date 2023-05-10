@@ -12,7 +12,7 @@ function Footer(){
 			</div>
 			
 		<div class="content">
-			<img src={Logo} alt=""/>
+			<img className="logo-footer" src={Logo} alt=""/>
 			<p>Por favor, preencha o formulário para que possamos ajudá-lo.</p>
 		</div>
 		<div class="container">

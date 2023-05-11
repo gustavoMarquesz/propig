@@ -38,9 +38,18 @@
 }
 
 .add-button{
+    display: flex;
     cursor: pointer;
-    color: #edeffd ;
+    color: #7380ec ;
+    background-color: rgba(255, 0, 0, 0);
+    /* justify-content: center; */
+
+}
+
+.add-button p{
     background-color: transparent;
+    align-self: center;
+    color: #181a1e;
 }
 
 .details{
@@ -62,6 +71,8 @@
 
 .research{
     display: flex;
+    width: 95%;
+    margin-left: 1%;
     margin-bottom: 15px;
     position: relative;
 }
@@ -74,13 +85,15 @@
     border-bottom: 0.5px solid black;
     background-color: var(--color-background);
     width: 250px;
+    border-radius: 5px;
+    text-align: center;
 }
 
 .research button{
     cursor: pointer;
     height: 25px;
     width: 100px;
-    margin-left: 15px;
+    margin-left: 24px;
     position: relative;
     transition: 1.5s;
     border-radius: 5px;
@@ -172,8 +185,19 @@ aside .sidebar a {
     position: relative;
     height: 3.7rem;
     transition: all 300ms ease;
-
 }
+
+.toggle-button {
+    display: flex;
+    color: var(--color-info-dark);
+    margin-left: 2rem;
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+    height: 3.7rem;
+    transition: all 300ms ease;
+}
+
 
 aside .sidebar button {
     cursor: pointer;
@@ -184,6 +208,11 @@ aside .sidebar button {
 
 
 aside .sidebar a span {
+    font-size: 1.6rem;
+    transition: all 300ms ease;
+}
+
+aside .sidebar .toggle-button span {
     font-size: 1.6rem;
     transition: all 300ms ease;
 }
@@ -211,6 +240,12 @@ aside .sidebar a.active span {
 aside .sidebar a:hover {
     color:#035885;
 }
+
+aside .sidebar .toggle-button:hover {
+    color:#035885;
+    margin-left: 3rem;    
+}
+
 
 aside .sidebar a:hover span {
     margin-left: 1rem;
@@ -355,7 +390,8 @@ main .insights .progress .number {
 
 main .recent-orders table {
     background: var(--color-white);
-    width: 100%;
+    width: 99%;
+    margin-left: 0.5%;
     border-radius: var(--card-border-radius);
     padding: var(--card-padding);
     text-align: center;
@@ -519,15 +555,14 @@ main .recent-orders a {
     justify-content: center;
 }
 
-.add-products{
-    cursor: pointer;
-}
 
 .swal2-input {
     width: 100%;
 }
 
-
+.item{
+    cursor: pointer;
+}
 
 .swal2-input,
 .swal2-select {

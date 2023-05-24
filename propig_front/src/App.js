@@ -8,6 +8,7 @@ import {BrowserRouter as Router, Link, Route, Routes, useLocation} from "react-r
 import AdminTimeLine from './pages/AdminTimeLine';
 import Footer from './components/Footer';
 import AdminPage from './pages/AdminPage';
+import ClientPage from './pages/ClientPage';
 
 
 function App() {
@@ -19,7 +20,8 @@ function App() {
           <Route path='/register' element={<RegisterPage/>}/>
           <Route path='/acompanhar-pedido' element={<TimeLine/>}/>
           <Route path='/admin-pedido' element={<AdminTimeLine/>}/>
-          <Route path='/admin-dashboard' element={<AdminPage/>}/>
+          <Route path='/client' element={<ClientPage/>}/>
+          <Route path='/dashboard' element={<AdminPage/>}/>
         </Routes>
       </Router>
       

@@ -17,18 +17,18 @@ function LoginPage(){
     const [isClosed, setIsClosed] = useState(false)
 
     function handleAdmin(event) {
-        event.preventDefault(); 
+        event.preventDefault();
       
         const login = document.getElementById("login").value;
         const password = document.getElementById("password").value;
       
         if (login === "admin" && password === "admin") {
-          window.location.href = "/admin-dashboard";
+          window.location.href = "/dashboard";
         } else {
-            alert("Login ou senha inválidos. Tente novamente.");
+            window.location.href = "/client";
            
         }
-      }
+    }
 
     const handleLogin = () => {
         setIsLoggedIn(true);
@@ -82,7 +82,7 @@ function LoginPage(){
                                         </label>
                                         <Link to="">Esqueceu a senha?</Link>
                                     </div>
-                                    <Link onClick={handleAdmin}><input type="submit" className="submit"/></Link>
+                                    <Link to="/dashboard" onClick={handleAdmin}><input type="submit" className="submit"/></Link>
                                 </form>  
                     </div>
                     }

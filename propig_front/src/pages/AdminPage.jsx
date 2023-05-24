@@ -68,7 +68,7 @@ function AdminPage(){
     
       const handleSelectOpcao = () => {
         Swal.fire({
-          title: 'Novo Item',
+          title: 'Novo Pedido',
           html: '<input id="cliente" class="swal2-input" placeholder="Cliente" required>' +
                 '<input id="rastreamento" class="swal2-input" placeholder="Rastreamento" required>' +
                 '<input id="data" class="swal2-input" placeholder="Data" type="date" required>'+

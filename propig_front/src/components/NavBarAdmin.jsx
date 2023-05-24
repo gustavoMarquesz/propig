@@ -15,6 +15,8 @@ function NavBarAdmin(){
         setExpandNavbar(false)
     },[local])
 
+
+
     return(
         <section className="navbar-admin" id={expandNavbar ? "open" : "close"}>
             <div className="toggleButton">

@@ -2,7 +2,7 @@
   "name": "propig",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://gustavoMarquesz.github.io/propig",
+  "homepage": "./",
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",

@@ -8,6 +8,62 @@
 }
 
 
+
+.area-propigs {
+  gap: 25px;
+  min-height: 100vh;
+  background-image: url("../assets/propigs.webp");
+  background-repeat: no-repeat;
+  background-size: 99.9%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+
+.middle-2{
+  width: 63%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+}
+
+.area-propigs h1{
+  font-size: 70px;
+}
+
+.area-propigs h4{
+  font-size: 25px;
+  width: 400px;
+  text-align: start;
+}
+
+.benefit{
+  font-size: 30px;
+  font-weight: 1000;
+  color: #194da6;
+}
+
+.nothing{
+  gap: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 500px;
+}
+
+.img-figure{
+  width: 300px;
+  height: 200px;
+}
+
+.figures{
+  gap: 35px;
+  display: flex;
+}
 .close-btn svg {
   font-size: 24px;
   color: #444;
@@ -151,3 +207,4 @@
 .custom-shape-divider-bottom-1681331603 .shape-fill {
   fill: #FFFFFF;
 }
+

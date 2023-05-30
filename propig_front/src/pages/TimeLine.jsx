@@ -7,6 +7,7 @@ import "react-vertical-timeline-component/style.min.css"
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 
 import adressIcons from "../assets/adressIcons.svg"
+import NavBarAdmin from "../components/NavBarAdmin";
 
 
 

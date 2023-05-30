@@ -30,7 +30,8 @@ import Person2SharpIcon from '@mui/icons-material/Person2Sharp';
 import AddCircleSharpIcon from '@mui/icons-material/AddCircleSharp';
 import TipsAndUpdatesSharpIcon from '@mui/icons-material/TipsAndUpdatesSharp';
 import NavBarAdmin from "../components/NavBarAdmin";
-
+import ExitToAppIcon from '@mui/icons-material/ExitToApp';
+import { ExitToApp } from "@mui/icons-material";
 
 
 function AdminPage(){
@@ -133,17 +134,6 @@ function AdminPage(){
       };
       
       
-      
-    useEffect(() => {
-        const intervalId = setInterval(() => {
-        setDataHora(new Date());
-        }, 1000); // atualiza a cada 1 segundo
-
-        return () => {
-        clearInterval(intervalId);
-        };
-    }, []);
-      
     return(
         <section>
             <NavBarAdmin/>
@@ -187,7 +177,7 @@ function AdminPage(){
                             <span class="material-symbols-sharp">
                                 <MailOutlineSharpIcon/></span>
                             <h3>Mensagens</h3>
-                            <span class="message-count">10</span>
+                            <span class="message-count">8</span>
                         </a>
 
 
@@ -200,22 +190,16 @@ function AdminPage(){
                         <a href="">
                             <span class="material-symbols-sharp">
                                 <SettingsIcon/></span>
-                            <h3>Configuracoes</h3>
+                            <h3>Configurações</h3>
                         </a>
 
                         <a href="">
-                            <span class="material-symbols-sharp">
-                                logout</span>
-                            <h3>Logout</h3>
+                            <span class="material-symbols-sharp"><ExitToApp/></span>
+                            <h3>Sair</h3>
                         </a>
                     </div>
                 </aside>
-            
                 <main>
-                    <div class="date">
-                        <h3>{dataHora.toLocaleString('pt-BR', { dateStyle: 'short', timeStyle: 'short', hour12: false }).replace(',', '')}</h3>
-                    </div>
-
                     <div class="insights">
                         <div class="sales">
                             <span class="teste"><SellIcon/></span>

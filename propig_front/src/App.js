@@ -10,6 +10,9 @@ import Footer from './components/Footer';
 import AdminPage from './pages/AdminPage';
 import ClientPage from './pages/ClientPage';
 
+import ConfgPage from './pages/ConfigPage';
+import AdminLogin from './pages/AdminLogin';
+
 
 function App() {
   return (
@@ -22,6 +25,10 @@ function App() {
           <Route path='/admin-pedido' element={<AdminTimeLine/>}/>
           <Route path='/client' element={<ClientPage/>}/>
           <Route path='/dashboard' element={<AdminPage/>}/>
+          <Route path='/config' element={<ConfgPage/>}/>
+          <Route path='/login/admin' element={<AdminLogin/>}/>
+          <Route path='/contatc' element={<Footer/>}/>
+          
         </Routes>
       </Router>
       

@@ -1,0 +1,173 @@
+
+.container-2 {
+    min-height: 100vh;
+    font-size: 14px !important; 
+    font-family: poppins, sans-serif;
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 14rem auto 23rem;
+    min-width: 100vw;
+    padding: 1.5%;
+}
+
+main .config {
+    margin-top: 2rem;
+    width: 50%;
+    height: 92%;
+    display: flex;
+    
+}
+
+aside{
+    width: 200px;
+}
+
+
+
+.config{
+    margin-left: 300px;
+
+}
+
+main .config-titulo {
+    margin-top: 2rem;
+    margin: 2rem 0rem 1rem 2rem;
+}
+
+
+
+main .config-conteudo {
+    background: var(--color-white);
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    text-align: left;
+    width: 90%;
+    height: 88%;
+    box-shadow: var(--box-shadow);
+    transition: all 200ms ease;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    
+}
+
+main .config h2 {
+    margin-left: 2rem;
+    margin-bottom: 0.8rem;
+}
+
+input[type="text"] {
+    width: 49.5%;
+    margin-bottom: 10px;
+    color: #000000;
+    background-color: #ebebeb;
+    /*margin: 0.6rem 0;*/
+    padding: 0.8rem 1.2rem; 
+    border: none;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    
+
+}
+.upload-icon{
+    cursor: pointer;
+    margin-left: 185px;
+}
+
+/* Estilo para a imagem */
+img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Estilo para o input de arquivo */
+input[type="file"] {
+    display: none;
+}
+input::placeholder{
+    color: #000000;
+}
+
+.profile-picture img {
+    display: flex;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit:cover;
+   /*margin-left: 4rem;*/
+ 
+}
+.profile-picture input[type="profile"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    opacity: 0;
+    cursor: pointer;
+}
+.img-container {
+    
+    justify-content:center;
+    display: flex;
+    margin-bottom: 2rem;
+
+    
+}
+/***********Modificações************/
+/*AQUI COLOQUEI ESSE UL/LI PARA SER O TITULO*/
+/*ACABEI TIRANDO O FORM MAS DEXEI COMENTADO NA ULTIMA LINHA PARA CASO FOR USAR*/
+/*DEPOIS CRIEI UMA DIV E COLOQUEI UMA CLASSE PARA O TITULO DADOS PESSOAL, ENDEREÇO E SETTINGS
+E EDITEI SUA CLASSE OCUPAR 100% DA CLASSE CONFIG-CONTEUDO E OUTRAS COISAS*/
+/*E O LABEL E OS INPUT COLOQUEI O TAMANHO DE 49.5 PARA OS LABEL/INPUT DIVIDIR EM 
+DOIS NO TELA E TER UM ESPAÇAMENTO ENTRE ELES [POIS ISSO O JUSTIFIFY:SPACE-BETWEEN] */
+.config-conteudo ul{
+    width: 100%;
+}
+.config-conteudo ul li{
+    list-style: disc;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0 2rem;
+}
+main .config-conteudo .dados-pessoais{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+}
+
+main .config-conteudo .endereco{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.config-conteudo .settings{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+
+}
+
+.config-conteudo label {
+    margin-bottom: 15px;
+    width: 49.5%;
+    font-size: 13px;
+}
+
+main .config-conteudo .butao{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+    justify-content: space-around;
+}
+

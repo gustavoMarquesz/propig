@@ -10,6 +10,7 @@ import ProfileDois from "../assets/profile-2.jpeg"
 import ProfileTres from "../assets/profile-3.jpeg"
 import ProfileQuatro from "../assets/profile-4.png"
 import Logo from '../assets/logo.png'
+import ProfileClient from '../assets/profileclient.jpeg'
 
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component"
 
@@ -30,6 +31,7 @@ import Person2SharpIcon from '@mui/icons-material/Person2Sharp';
 import AddCircleSharpIcon from '@mui/icons-material/AddCircleSharp';
 import TipsAndUpdatesSharpIcon from '@mui/icons-material/TipsAndUpdatesSharp';
 import NavBarAdmin from "../components/NavBarAdmin";
+import NavBarClient from "../components/NavBarClient";
 
 
 
@@ -100,18 +102,14 @@ function ClientPage(){
         setTheme(newTheme)
     }
    
-    
-    
-      
-      
     return(
         <section>
-            <NavBarAdmin/>
+            <NavBarClient/>
             <div class="container" data-theme={theme}>
                 <aside>
                     <div class="top">
                         <div class="logo">
-                            <h2 class="text-muted">ADM</h2>
+                            <h2 class="text-muted">Cliente</h2>
                         </div>
                         <div class="close" id="close-btn"><span class="material-symbols-sharp">close</span>
                         </div>
@@ -133,11 +131,11 @@ function ClientPage(){
                         </a>
 
                     
-                        <a href="">
+                        <Link to='/config'>
                             <span class="material-symbols-sharp">
                                 <SettingsIcon/></span>
                             <h3>Configuracoes</h3>
-                        </a>
+                        </Link>
 
                         <a href="">
                             <span class="material-symbols-sharp">
@@ -149,7 +147,7 @@ function ClientPage(){
             
                 <main>
                     <div class="recent-orders">
-                        <h2>Pedidos recentes</h2>
+                        <h2>Últimos pedidos</h2>
                         
                         <table>
                             <thead>
@@ -192,7 +190,7 @@ function ClientPage(){
                         <div class="updates">
                             <div class="update">
                                 <div class="profile-photo">
-                                    <img src={ProfileDois}/>
+                                    <img src={ProfileUm}/>
                                 </div>
                                 <div class="message">
                                     <p><b>Atualização na entrega:</b> seu pedido está em destino.</p>
@@ -202,7 +200,7 @@ function ClientPage(){
 
                             <div class="update">
                                 <div class="profile-photo">
-                                    <img src={ProfileTres}/>
+                                    <img src={ProfileUm}/>
                                 </div>
                                 <div class="message">
                                     <p><b>Atualização na entrega:</b> seu pedido <b>código 3456</b> saiu para entrega!</p>
@@ -212,7 +210,7 @@ function ClientPage(){
 
                             <div class="update">
                                 <div class="profile-photo">
-                                    <img src={ProfileQuatro}/>
+                                    <img src={ProfileTres}/>
                                 </div>
                                 <div class="message">
                                 <p><b>Promoção!</b> solicitação de maquinas sem frete por tempo limitado!</p>

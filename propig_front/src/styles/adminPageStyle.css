@@ -24,6 +24,10 @@
 
     --box-shadow: 0 2rem 3rem var(--color-light);
 }
+
+
+
+ 
 /*--------Dark THEME VARIVAIES*/
 
 [data-theme='dark']{
@@ -35,6 +39,14 @@
     --color-dark-variant:#a3bdcc;
     --color-light:rgba(0, 0, 0, 0.4);
     --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+.cliente {
+    display: grid;
+    width: 96%;
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 14rem auto 23rem;
 }
 
 .add-button{
@@ -57,16 +69,29 @@
     cursor: pointer;
 }
 
+.middle{
+    position: relative;
+    display: flex;
+    width: 400px;
+    justify-content: flex-start;
+    flex-direction: row;
+}
 .container {
     height: 100vh;
     font-size: 14px !important; 
     font-family: poppins, sans-serif;
     display: flex;
-    width: 96%;
     margin: 0 auto;
     gap: 1.8rem;
     grid-template-columns: 14rem auto 23rem;
     width: 100%;
+    padding: 1.5%;
+    width: 100%;
+}
+
+main{
+    width: 100vw;
+
 }
 
 .research{
@@ -243,7 +268,7 @@ aside .sidebar a:hover {
 
 aside .sidebar .toggle-button:hover {
     color:#035885;
-    margin-left: 3rem;    
+    margin-left: 2rem;    
 }
 
 
@@ -262,11 +287,6 @@ aside .sidebar .message-count {
 
 /*==========MAIN==================*/
 
-main {
-    margin-bottom: 12.4rem;
-    width: 70%;
-    position: relative;
-}
 
 
 main .date {
@@ -286,7 +306,10 @@ main .insights {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.6rem;
+    align-items: center;
 }
+
+
 
 main .insights>div {
     background: var(--color-white);

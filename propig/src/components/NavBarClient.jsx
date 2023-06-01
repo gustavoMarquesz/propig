@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react"
 import Logo from "../assets/logo.png"
-import ProfileUm from '../assets/profile-1.jpg'
+import ProfileClient from '../assets/profileclient.jpeg'
 import MenuIcon from '@mui/icons-material/Menu';
-import navBarAdmin from "../styles/navBarAdmin.css"
 import { Link, useLocation } from "react-router-dom"
 
-function NavBarAdmin(){
+
+function NavBarClient(){
 
     const [expandNavbar, setExpandNavbar] = useState(false)
 
@@ -28,10 +28,10 @@ function NavBarAdmin(){
 
                 </div>
                 <div className="other-links">
-                    <Link>Olá, Marcos <br/><p>admin</p></Link>
+                    <Link>Olá, Jayne<br/><p>user</p></Link>
                    
                     <div class="profile-photo">
-                        <img src={ProfileUm}/>
+                        <img src={ProfileClient}/>
                     </div>
                    
                 </div>
@@ -42,4 +42,4 @@ function NavBarAdmin(){
 
 }
 
-export default NavBarAdmin
+export default NavBarClient

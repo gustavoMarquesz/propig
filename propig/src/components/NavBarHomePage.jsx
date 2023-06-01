@@ -25,9 +25,9 @@ function NavBarHomePage(){
                     <Link className="link" to="/"> <img className="propig-imagem" src={Logo}/> </Link>
                 </div>
                 <div className="other-links"> 
-                    <Link className="link" to="/ainda/não/definido">Nossas soluções</Link>
-                    <Link className="link" to="/duvidas">Dúvidas</Link>
-                    <Link className="link" to="/ainda/não/definido">Fale conosco</Link>
+                    <Link className="link" to="/">Home</Link>
+                    <Link className="link" to="/contact">Fale conosco</Link>
+                    <Link className="link" to="/login/admin" >Admin</Link>
                 </div>
             </div>
             

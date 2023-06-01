@@ -1,0 +1,202 @@
+
+.home2 {
+    display: flex;
+  }
+  
+.welcome {
+  font-size: 27px;
+    color: #fff;
+    flex: 1;
+    gap: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50px;
+    flex-wrap: wrap;
+  }
+  
+.welcome-text-2 {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    font-size: 13px;
+    flex-wrap: wrap;
+  }
+  
+.welcome-text h1 {
+    font-size: 40px;
+  }
+
+.prazer {
+    color: #ffcb00;
+  }
+
+.propig {
+    font-weight: bold;
+    color: rgb(20, 20, 160);
+  }
+  
+.maquininha2 {
+    width: 470px;
+    height: 470px;
+  }
+  
+.login-form {
+    width: 460px;
+    color: #fff;
+    background-color: #0d6efd;
+}
+
+.login-form form {
+    gap: 20px;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-form h4 {
+   font-size: 13px;
+}
+
+.login-form input{
+    color: #fff;
+    outline: 0;
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid #fff;
+    background-color: #0d6efd;
+}
+
+::placeholder {
+    color: #fff;
+  }
+
+.login-form button {
+    margin-top: 30px;
+    cursor: pointer;
+    width: 250px;
+    height: 30px;
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    background-color: #0d6efd;
+    transition: 0.8s;
+    font-size: 16px;
+ }
+
+ .login-form button:hover {
+    color: #0d6efd;
+    background-color: #fff;
+ }
+
+ .box-rastreio-2{
+    background-color: #ffcb00;
+    border-radius: 5px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+ }
+
+ .box-rastreio-2 input{
+    margin-top: 3px;
+    height: 15px;
+    width: 250px;
+    border-radius: 4px;
+    border: 0.5px solid;
+    outline: 0;
+ }
+
+ .box-rastreio-2 form{
+    gap: 10px;
+    display: flex;
+ }
+
+ .box-rastreio-2 button{
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+ }
+
+ .login-form a{
+  font-size: 11px;
+  cursor: pointer;
+ }
+
+ 
+
+@media screen and (max-width: 775px){
+  .welcome{
+    gap: 1px;
+  }
+  .home2{
+    flex-direction: column;
+  }
+
+  .welcome-text-2{
+    gap: 2px;
+    font-size: 12px;
+    width: 100%;
+  }
+
+  .welcome-text-2 h1{
+    font-size: 35px;
+  }
+
+  .box-rastreio-2{
+   width: 290px;
+ }
+
+ .box-rastreio-2 input{
+    margin-top: 3px;
+    height: 15px;
+    width: 130px;
+    border-radius: 4px;
+    border: 0.5px solid;
+    outline: 0;
+ }
+ .maquininha1{
+  position: relative;
+  margin-right: 90px;
+  width: 230px;
+  height: 230px;
+ }
+
+ .login-form{
+  width: 100%;
+ }  
+}
+
+@media screen and (min-width:2000px){
+  .maquininha1{
+    margin-right: 90px;
+    width: 530px;
+    height: 530px;
+   }
+
+   .welcome-text-2{
+    font-size: 16px;
+    width: 500px;
+  }
+
+  .login-form{
+    width: 25%;
+   } 
+
+}
+
+
+
+
+
+
+

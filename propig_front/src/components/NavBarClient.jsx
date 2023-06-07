@@ -24,14 +24,15 @@ function NavBarClient(){
             </div>
             <div className="links">
                 <div>
-                    <Link className="link" to="/admin-dashboard"> <img className="propig-imagem" src={Logo}/> </Link>
+                    <Link className="link" to="/"> <img className="propig-imagem" src={Logo}/> </Link>
 
                 </div>
                 <div className="other-links">
                     <Link>Olá, Jayne<br/><p>user</p></Link>
                    
-                    <div class="profile-photo">
-                        <img src={ProfileClient}/>
+                    <div className="div-client-image">
+                        <img className="profile-photo-2" src={ProfileClient}/>
+                    
                     </div>
                    
                 </div>

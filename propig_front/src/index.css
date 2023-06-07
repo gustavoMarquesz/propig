@@ -66,6 +66,7 @@ small {
 }
 
 figure{
+  font-size: 12px;
   gap: 3px;
   display: flex;
   align-items: center;

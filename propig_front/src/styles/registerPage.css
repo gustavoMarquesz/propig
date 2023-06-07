@@ -48,6 +48,7 @@
 .input-register input:valid {
   border: 2px solid #000;
 }
+
 .register-button {
   margin-top: 20px;
 }
@@ -74,4 +75,32 @@
   background: #fbd314;
   color: black;
   border: #000;
+}
+
+@media (max-width: 768px) {
+
+  .container-register {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-left: 30px;
+    margin-top: 25px;
+  }
+
+  .input-register {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .input-register input {
+    width: 80%;
+  }
+
+  .register-button button{
+    margin-right: 20px;
+  }
 }

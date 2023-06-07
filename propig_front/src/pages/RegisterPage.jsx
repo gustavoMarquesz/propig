@@ -6,6 +6,7 @@ import InputMask from 'react-input-mask';
 import NavBarHomePage from "../components/NavBarHomePage";
 
 function RegisterPage() {
+  // Estados para os campos do formulário
   const [cnpj, setCnpj] = useState('');
   const [loja, setLoja] = useState('');
   const [email, setEmail] = useState('');
@@ -18,6 +19,7 @@ function RegisterPage() {
   const [cidade, setCidade] = useState('');
   const [estado, setEstado] = useState('');
 
+  // Função para lidar com o envio do formulário
   const handleSubmit = (event) => {
     event.preventDefault();
     Swal.fire({
@@ -28,6 +30,7 @@ function RegisterPage() {
     });
   };
 
+  // Função para formatar o CNPJ
   const formatarCNPJ = (cnpj) => {
     cnpj = cnpj.replace(/\D/g, '');
 
@@ -43,13 +46,13 @@ function RegisterPage() {
     return cnpj;
   };
 
+  // Função para lidar com a mudança do CNPJ
   const handleCnpjChange = (event) => {
     const formattedCnpj = formatarCNPJ(event.target.value);
     setCnpj(formattedCnpj);
   };
 
-
-
+  // Função para lidar com a mudança do CEP
   const handleCepChange = async (e) => {
     setCep(e.target.value);
 
@@ -126,10 +129,6 @@ function RegisterPage() {
                     onChange={(e) => setTelefone(e.target.value)}
                   />
                 </div>
-
-
-
-
 
                 <div>
                   <label htmlFor="cep">CEP</label>

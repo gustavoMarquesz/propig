@@ -25,6 +25,7 @@ function App() {
           <Route path='/cliente' element={<ClientPage/>}/>
           <Route path='/dashboard' element={<AdminPage/>}/>
           <Route path='/config' element={<ConfgPage/>}/>
+          <Route path='/cliente/config' element={<ConfgPage/>}/>
           <Route path='/login/cliente' element={<LoginForm tela="cliente" />} />
           <Route path='/login/admin' element={<LoginForm tela="adm" />} />
           <Route path='/contact' element={<Footer/>}/>

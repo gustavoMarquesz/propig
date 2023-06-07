@@ -31,7 +31,8 @@ function NavBarClient(){
                     <Link>Olá, Jayne<br/><p>user</p></Link>
                    
                     <div className="div-client-image">
-                        <img className="profile-photo-2" src={ProfileClient}/>
+                        <img className="profile-photo-3" src={ProfileClient}/>
+        
                     
                     </div>
                    

@@ -1,10 +1,11 @@
+// Importando as bibliotecas e arquivos necessários
+import { useEffect, useState } from "react" // O famoso React
+import Swal from 'sweetalert2'; // Biblioteca para exibir pop-ups bonitos
+import { Link } from "react-router-dom" // Para criar links de navegação
+import useLocalStorage from 'use-local-storage' // Para armazenar dados no local storage
+import ClientePage from '../styles/clientePageStyle.css' // Arquivo de estilo para a página
 
-import { useEffect, useState } from "react"
-import Swal from 'sweetalert2';
-import { Link } from "react-router-dom"
-import useLocalStorage from 'use-local-storage'
-import ClientePage from '../styles/clientePageStyle.css'
-
+// Importando as imagens e ícones
 import ProfileUm from "../assets/profile-1.jpg"
 import ProfileDois from "../assets/profile-2.jpeg"
 import ProfileTres from "../assets/profile-3.jpeg"
@@ -13,9 +14,9 @@ import Logo from '../assets/logo.png'
 import ProfileClient from '../assets/profileclient.jpeg'
 import MenuIcon from '@mui/icons-material/Menu';
 
-import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component"
+import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component" // Componente de linha do tempo vertical
 
-
+// Importando ícones do Material-UI
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 import SellIcon from '@mui/icons-material/Sell';
 import MovingIcon from '@mui/icons-material/Moving';
@@ -36,79 +37,74 @@ import NavBarAdmin from "../components/NavBarAdmin";
 import NavBarClient from "../components/NavBarClient";
 import LogoutSharpIcon from '@mui/icons-material/LogoutSharp';
 
-
-
 function ClientPage() {
-    const [dataHora, setDataHora] = useState(new Date());
-    const [theme, setTheme] = useLocalStorage('theme' ? 'dark' : 'light')
-    let [data, setData] = useState([{
-        numeroDoPedido: '#254688',
-        Rastreamento: '8586223413',
-        Previsao: '30/05/2023',
-        Status: 'Em trânsito'
-    },
-    {
-        numeroDoPedido: '#254687',
-        Rastreamento: 'Cancelado',
-        Previsao: 'Reembolso',
-        Status: 'Cancelado'
-
-    },
-    {
-        numeroDoPedido: '#254686',
-        Rastreamento: '8563223413',
-        Previsao: '15/04/2023',
-        Status: 'Entregue'
-    },
-    {
-        numeroDoPedido: '#254685',
-        Rastreamento: '6563223413',
-        Previsao: '14/04/2023',
-        Status: 'Entregue'
-
-    },
-    {
-        numeroDoPedido: '#254684',
-        Rastreamento: '7563223413',
-        Previsao: '13/04/2023',
-        Status: 'Entregue'
-    },
-    {
-        numeroDoPedido: '#254683',
-        Rastreamento: '563228713',
-        Previsao: '20/05/2023',
-        Status: 'Em trânsito'
-
-    },
-    {
-        numeroDoPedido: '#254682',
-        Rastreamento: '5563223413',
-        Previsao: '03/04/2023',
-        Status: 'Entregue'
-
-    },
-    {
-        numeroDoPedido: '#254681',
-        Rastreamento: '5564423413',
-        Previsao: '05/05/2023',
-        Status: 'Em trânsito'
-
-    },
-    {
-        numeroDoPedido: '#254680',
-        Rastreamento: '5463223413',
-        Previsao: '04/05/2023',
-        Status: 'Em trânsito'
-    }])
-
-
+    const [dataHora, setDataHora] = useState(new Date()); // Estado para armazenar a data e hora atual
+    const [theme, setTheme] = useLocalStorage('theme' ? 'dark' : 'light') // Estado para armazenar o tema escolhido pelo usuário (armazenado no local storage)
+    let [data, setData] = useState([ // Estado para armazenar informações fictícias de pedidos
+        {
+            numeroDoPedido: '#254688',
+            Rastreamento: '8586223413',
+            Previsao: '30/05/2023',
+            Status: 'Em trânsito'
+        },
+        {
+            numeroDoPedido: '#254687',
+            Rastreamento: 'Cancelado',
+            Previsao: 'Reembolso',
+            Status: 'Cancelado'
+        },
+        {
+            numeroDoPedido: '#254686',
+            Rastreamento: '8563223413',
+            Previsao: '15/04/2023',
+            Status: 'Entregue'
+        },
+        {
+            numeroDoPedido: '#254685',
+            Rastreamento: '6563223413',
+            Previsao: '14/04/2023',
+            Status: 'Entregue'
+        },
+        {
+            numeroDoPedido: '#254684',
+            Rastreamento: '7563223413',
+            Previsao: '13/04/2023',
+            Status: 'Entregue'
+        },
+        {
+            numeroDoPedido: '#254683',
+            Rastreamento: '563228713',
+            Previsao: '20/05/2023',
+            Status: 'Em trânsito'
+        },
+        {
+            numeroDoPedido: '#254682',
+            Rastreamento: '5563223413',
+            Previsao: '03/04/2023',
+            Status: 'Entregue'
+        },
+        {
+            numeroDoPedido: '#254681',
+            Rastreamento: '5564423413',
+            Previsao: '05/05/2023',
+            Status: 'Em trânsito'
+        },
+        {
+            numeroDoPedido: '#254680',
+            Rastreamento: '5463223413',
+            Previsao: '04/05/2023',
+            Status: 'Em trânsito'
+        }
+    ])
 
     const toggleMode = () => {
-        const newTheme = theme === 'light' ? 'dark' : 'light';
-        setTheme(newTheme);
+        const newTheme = theme === 'light' ? 'dark' : 'light'; // Alterna entre o tema "light" e "dark"
+        setTheme(newTheme); // Atualiza o estado do tema
     };
+
+
     const handleLogout = () => {
-        Swal.fire({
+        Swal.fire({ // Exibe um pop-up de confirmação usando a biblioteca Swal
             title: 'Deseja fazer logout?',
             icon: 'question',
             showCancelButton: true,
@@ -118,18 +114,18 @@ function ClientPage() {
             cancelButtonText: 'Não'
         }).then((result) => {
             if (result.isConfirmed) {
-                window.location.href = "/";
+                window.location.href = "/"; // Redireciona para a página inicial ao confirmar o logout
             }
         });
     };
 
-
-
-
     return (
-        <section>
-            <NavBarClient />
-            <div className="container-2" data-theme={theme}>
+        <section  data-theme={theme}>
+           <div className="div-menu-configs">
+                <NavBarClient /> {/* Componente da barra de navegação para o cliente */}
+                <Link to="/config" className="link-config">Config</Link>
+           </div>
+            <div className="container">
                 <aside>
                     <div className="top">
                         <div className="logo">
@@ -181,6 +177,7 @@ function ClientPage() {
                                     <th>Número do pedido</th>
                                     <th>Rastreamento</th>
                                     <th>Previsão</th>
+                                    <th>Status</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -190,6 +187,7 @@ function ClientPage() {
                                         <td>{index.Rastreamento}</td>
                                         <td>{index.Previsao}</td>
 
+                                        {/* Renderiza a célula de status de acordo com o valor */}
                                         {index.Status === "Em trânsito" ? (
                                             <td className="warning">{index.Status}</td>
                                         ) : (
@@ -207,6 +205,7 @@ function ClientPage() {
                                         )}
 
                                         <td>
+                                            {/* Renderiza um link para detalhes ou apenas um texto "detalhes" */}
                                             {index.Status === "Cancelado" ? (
                                                 "detalhes"
                                             ) : (
@@ -215,7 +214,6 @@ function ClientPage() {
                                         </td>
                                     </tr>
                                 ))}
-
                             </tbody>
                         </table>
                         <a href="#">Mostrar Tudo</a>
@@ -224,9 +222,7 @@ function ClientPage() {
 
                 <div className="right">
                     <div className="top">
-                        <button id="menu-btn">
-                            <span ><MenuIcon/></span>
-                        </button>
+                        <button><MenuIcon /> </button>
                     </div>
                     <div className="recent-updates">
                         <h2>Atualizações Recentes</h2>
@@ -258,7 +254,7 @@ function ClientPage() {
 
                             <div className="update">
                                 <div>
-                                    <img className="profile-photo"  src={ProfileTres} />
+                                    <img className="profile-photo" src={ProfileTres} />
                                 </div>
                                 <div className="message">
                                     <p>
@@ -276,4 +272,4 @@ function ClientPage() {
     );
 }
 
-export default ClientPage;
+export default ClientPage; // Exporta o componente para uso em outros arquivos

@@ -1,4 +1,4 @@
-import loginPage from "../styles/loginPage.css"
+import loginPage from "../styles/homePage.css"
 import { FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom"
 import { useState } from "react";
@@ -6,11 +6,10 @@ import { useState } from "react";
 
 import Maquininha2 from "../assets/maquinha.webp"
 import Progess from "../assets/progress.svg"
-import AdminTimeLine from "../pages/AdminTimeLine"
+import AdminTimeLine from "./AdminTimeLine"
 import Footer from "../components/Footer";
 import NavBarHomePage from "../components/NavBarHomePage";
 import AdminPage from "./AdminPage";
-
 import BetterPeformace from "../assets/better.svg"
 import Gestao from "../assets/gestao.svg"
 import LessPrice from "../assets/lessprice.svg"
@@ -74,7 +73,7 @@ function LoginPage(){
                                         </label>
                                         <Link to="">Esqueceu a senha?</Link>
                                     </div>
-                                    <Link to="/client"><input type="submit" className="submit"/></Link>
+                                    <Link to="/cliente"><input type="submit" className="submit"/></Link>
                                 </form>  
                                     </div>
                     }

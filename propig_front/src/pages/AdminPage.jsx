@@ -32,6 +32,7 @@ import TipsAndUpdatesSharpIcon from '@mui/icons-material/TipsAndUpdatesSharp';
 import NavBarAdmin from "../components/NavBarAdmin";
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import { ExitToApp } from "@mui/icons-material";
+import MenuIcon from '@mui/icons-material/Menu';
 
 
 function AdminPage(){
@@ -208,14 +209,7 @@ function AdminPage(){
                                     <h3>Total Vendas</h3>
                                     <h1>R$25,024</h1>
                                 </div>
-                                <div class="progress">
-                                    <svg>
-                                        <circle cx='42' cy='29' r='25'></circle>
-                                    </svg>
-                                    <div class="number">
-                                        <p>80%</p>
-                                    </div>
-                                </div>
+                                
                             </div>
                             <small class="text-muted">Últimas 24 Horas</small>
                         </div>
@@ -227,14 +221,7 @@ function AdminPage(){
                                     <h3>Entregas</h3>
                                     <h1>1000</h1>
                                 </div>
-                                <div class="progress">
-                                    <svg>
-                                        <circle cx='42' cy='29' r='25'></circle>
-                                    </svg>
-                                    <div class="number">
-                                        <p>70%</p>
-                                    </div>
-                                </div>
+                               
                             </div>
                             <small class="text-muted">Últimas 24 Horas</small>
                         </div>
@@ -247,55 +234,51 @@ function AdminPage(){
                                     <h3>Rendimento</h3>
                                     <h1>R$250,024</h1>
                                 </div>
-                                <div class="progress">
-                                    <svg>
-                                        <circle cx='42' cy='29' r='25'></circle>
-                                    </svg>
-                                    <div class="number">
-                                        <p>60%</p>
-                                    </div>
-                                </div>
+                               
                             </div>
                             <small class="text-muted">Últimas 24 Horas</small>
                         </div>
                     
                     </div>
                 
-                    <div class="recent-orders">
+                    <div className="recent-orders">
+                       <div className="recent">
                         <h2>Pedidos recentes</h2>
-                        <div className="research">
-                            <input placeholder="Pesquise por CNPJ ou código de rastreio"/>
-                            <button>pesquisar</button>
-                        </div>
-                        
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Data</th>
-                                    <th>Cliente</th>
-                                    <th>Rastreamento</th>
-                                    <th>Pagamento</th>
-                                    <th>Status</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {data.map((index)=> (
-                                    <tr key={index}>
-                                        <td>{index.data}</td>
-                                        <td>{index.cliente}</td>
-                                        <td>{index.rastreamento}</td>
-                                        <td>{index.pagamento}</td>
-                                        {index.status == "Pendente" ?  <td class="warning">{index.status}</td> : ""}
-                                        {index.status == "Entregue" ?  <td class="success">{index.status}</td> :""}
-                                        {index.status == "Cancelado" ?  <td class="danger">{index.status}</td> : ""}
-                                        
-                                        <td className="details"><Link to="/acompanhar-pedido">detalhes</Link></td>
-                                    </tr>
-                                ))}
+                            <div className="research">
+                                <input placeholder="Pesquise por CNPJ ou código de rastreio"/>
+                                <button>pesquisar</button>
+                            </div>
                             
-                            </tbody>           
-                        </table>
-                        <a href="#">Mostrar Tudo</a>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Data</th>
+                                        <th>Cliente</th>
+                                        <th>Rastreamento</th>
+                                        <th>Pagamento</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {data.map((index)=> (
+                                        <tr key={index}>
+                                            <td>{index.data}</td>
+                                            <td>{index.cliente}</td>
+                                            <td>{index.rastreamento}</td>
+                                            <td>{index.pagamento}</td>
+                                            {index.status == "Pendente" ?  <td class="warning">{index.status}</td> : ""}
+                                            {index.status == "Entregue" ?  <td class="success">{index.status}</td> :""}
+                                            {index.status == "Cancelado" ?  <td class="danger">{index.status}</td> : ""}
+                                            
+                                            <td className="details"><Link to="/acompanhar-pedido">detalhes</Link></td>
+                                        </tr>
+                                    ))}
+                                
+                                </tbody>           
+                            </table>
+                            <a href="#">Mostrar Tudo</a>
+
+                       </div>
                     </div>
                 </main>
             
@@ -303,15 +286,15 @@ function AdminPage(){
                 <div class="right">
                     <div class="top">
                         <button id="menu-btn">
-                            <span class="material-symbols-sharp">menu</span>
+                            <span><MenuIcon/></span>
                         </button>
                     </div>
                     <div class="recent-updates">
                         <h2>Atualizações Recentes</h2>
                         <div class="updates">
                             <div class="update">
-                                <div class="profile-photo">
-                                    <img src={ProfileDois}/>
+                                <div>
+                                    <img src={ProfileDois} class="profile-photo"/>
                                 </div>
                                 <div class="message">
                                     <p><b>Lucas Matheus</b> Acaba de solicitar o envio da maquineta para a ECCO</p>
@@ -320,8 +303,8 @@ function AdminPage(){
                             </div>
 
                             <div class="update">
-                                <div class="profile-photo">
-                                    <img src={ProfileTres}/>
+                                <div>
+                                    <img  src={ProfileTres} class="profile-photo"/>
                                 </div>
                                 <div class="message">
                                     <p><b>Gustavo Marques</b> Acaba de solicitar o envio da maquineta para a Oficina geral e Mercado
@@ -332,8 +315,8 @@ function AdminPage(){
                             </div>
 
                             <div class="update">
-                                <div class="profile-photo">
-                                    <img src={ProfileQuatro}/>
+                                <div>
+                                    <img class="profile-photo" src={ProfileQuatro}/>
                                 </div>
                                 <div class="message">
                                     <p><b>Rafael Santiago</b> Acaba de solicitar o reembolso a FICR</p>

@@ -1,5 +1,5 @@
 
-import LoginPage from './pages/LoginPage';
+import HomePage from './pages/HomePage';
 import RegisterPage from './pages/RegisterPage';
 import TimeLine from './pages/TimeLine';
 
@@ -11,23 +11,23 @@ import AdminPage from './pages/AdminPage';
 import ClientPage from './pages/ClientPage';
 
 import ConfgPage from './pages/ConfigPage';
-import AdminLogin from './pages/AdminLogin';
-
+import LoginForm from './pages/LoginForm';
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Routes>
-          <Route path='/' element={<LoginPage/>}/>
+          <Route path='/' element={<HomePage/>}/>
           <Route path='/register' element={<RegisterPage/>}/>
           <Route path='/acompanhar-pedido' element={<TimeLine/>}/>
           <Route path='/admin-pedido' element={<AdminTimeLine/>}/>
-          <Route path='/client' element={<ClientPage/>}/>
+          <Route path='/cliente' element={<ClientPage/>}/>
           <Route path='/dashboard' element={<AdminPage/>}/>
           <Route path='/config' element={<ConfgPage/>}/>
-          <Route path='/login/admin' element={<AdminLogin/>}/>
-          <Route path='/contatc' element={<Footer/>}/>
+          <Route path='/login/cliente' element={<LoginForm tela="cliente" />} />
+          <Route path='/login/admin' element={<LoginForm tela="adm" />} />
+          <Route path='/contact' element={<Footer/>}/>
           
         </Routes>
       </Router>

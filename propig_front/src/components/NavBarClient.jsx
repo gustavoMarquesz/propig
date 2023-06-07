@@ -20,7 +20,7 @@ function NavBarClient(){
     return(
         <section className="navbar-admin" id={expandNavbar ? "open" : "close"}>
             <div className="toggleButton">
-                <button onClick={() => setExpandNavbar((prev)=> !prev)}> <MenuIcon/> </button>
+                <button className="button-nav" onClick={() => setExpandNavbar((prev)=> !prev)}> <MenuIcon/> </button>
             </div>
             <div className="links">
                 <div>

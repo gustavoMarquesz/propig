@@ -538,11 +538,6 @@ function AdminPage() {
                     </div>
                 </main>
                 <div className="right">
-                    <div className="top">
-                    <button id="menu-btn">
-                            <span><MenuIcon/></span>
-                        </button>
-                    </div>
                     <div className="recent-updates">
                         <h2>Atualizações Recentes</h2>
                         <div className="updates">

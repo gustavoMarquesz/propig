@@ -19,8 +19,8 @@ function NavBarAdmin(){
 
     return(
         <section className="navbar-admin" id={expandNavbar ? "open" : "close"}>
-            <div className="toggleButton">
-                <button onClick={() => setExpandNavbar((prev)=> !prev)}> <MenuIcon/> </button>
+            <div>
+                <button className="button-nav" onClick={() => setExpandNavbar((prev)=> !prev)}> <MenuIcon/> </button>
             </div>
             <div className="links">
                 <div>
@@ -31,7 +31,7 @@ function NavBarAdmin(){
                     <Link>Olá, Marcos <br/><p>admin</p></Link>
                    
                     <div>
-                        <img  className="profile-photo-2" src={ProfileUm}/>
+                        <img  className="profile-photo-3" src={ProfileUm}/>
                     </div>
                    
                 </div>

@@ -4,7 +4,7 @@
 /* Variáveis do ROOT */
 :root {
     /* Cores */
-    --color-primary: #7380ec;
+    --color-primary: #046ba3;
     --color-sucess: #41f1b6;
     --color-warning: #ffbb55;
     --color-danger: #f80b0b;
@@ -13,7 +13,7 @@
     --color-info-light: #dce1eb;
     --color-dark: #363949;
     --color-light: rgba(132, 139, 200, 0.18);
-    --color-primary-variant: #111e88;
+    --color-primary-variant: #046ba3;
     --color-dark-variant: #677483;
     --color-background: #f6f6f9;
 
@@ -57,7 +57,7 @@
 .add-button {
     display: flex;
     cursor: pointer;
-    color: #7380ec ;
+    color: #046ba3 ;
     background-color: rgba(255, 0, 0, 0);
 }
 
@@ -69,7 +69,7 @@
 
 /* Classe .details */
 .details {
-    color: #7380ec;
+    color: #046ba3;
     cursor: pointer;
 }
 
@@ -715,6 +715,8 @@ main .recent-orders a {
 
     main {
         padding: 0 1rem;
+        display: flex;
+        flex-direction: column-reverse;
     }
 
     main .recent-orders {

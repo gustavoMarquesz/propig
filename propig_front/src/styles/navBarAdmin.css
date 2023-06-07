@@ -72,7 +72,7 @@
       width: 100%;
       text-align: center;
     }
-    
+
     @media only screen and (max-width: 900px) {
       .navbar a {
         width: 70px;
@@ -90,6 +90,8 @@
   
     
     @media only screen and (min-width: 600px) {
+
+      
       .navbar-admin{
         height: 80px;
       }

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 * {
   margin: 0;
@@ -17,11 +17,10 @@ body {
   width: 100vw;
   height: 100vh;
   font-size: 0.88rem;
- 
   user-select: none;
   overflow-x: hidden;
   color: var(--color-dark);
-  font-family: 'Arimo', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 ul, li {

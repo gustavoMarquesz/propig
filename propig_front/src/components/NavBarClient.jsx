@@ -20,7 +20,7 @@ function NavBarClient(){
     return(
         <section className="navbar-admin" id={expandNavbar ? "open" : "close"}>
             <div className="toggleButton">
-                <button onClick={() => setExpandNavbar((prev)=> !prev)}> <MenuIcon/> </button>
+                <button className="button-nav" onClick={() => setExpandNavbar((prev)=> !prev)}> <MenuIcon/> </button>
             </div>
             <div className="links">
                 <div>
@@ -31,7 +31,8 @@ function NavBarClient(){
                     <Link>Olá, Jayne<br/><p>user</p></Link>
                    
                     <div className="div-client-image">
-                        <img className="profile-photo-2" src={ProfileClient}/>
+                        <img className="profile-photo-3" src={ProfileClient}/>
+        
                     
                     </div>
                    

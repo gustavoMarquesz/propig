@@ -1,6 +1,10 @@
-/* Variaveis do ROOT*/
+/* Importação de fonte do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* Variáveis do ROOT */
 :root {
-    --color-primary: #7380ec;
+    /* Cores */
+    --color-primary: #046ba3;
     --color-sucess: #41f1b6;
     --color-warning: #ffbb55;
     --color-danger: #f80b0b;
@@ -9,28 +13,27 @@
     --color-info-light: #dce1eb;
     --color-dark: #363949;
     --color-light: rgba(132, 139, 200, 0.18);
-    --color-primary-variant: #111e88;
+    --color-primary-variant: #046ba3;
     --color-dark-variant: #677483;
     --color-background: #f6f6f9;
 
+    /* Bordas */
     --card-border-radius: 2rem;
     --border-radius-1: 0.4rem;
     --border-radius-2: 0.8rem;
     --border-radius-3: 1.2rem;
 
+    /* Espaçamentos e preenchimentos */
     --card-padding: 1.8rem;
     --padding-1: 1.2rem;
 
-
+    /* Sombra */
     --box-shadow: 0 2rem 3rem var(--color-light);
 }
 
-
-
- 
-/*--------Dark THEME VARIVAIES*/
-
-[data-theme='dark']{
+/* Tema escuro */
+[data-theme='dark'] {
+    /* Cores */
     color: #dce1eb;
     background-color: #181a1e;
     --color-background: #202529;
@@ -41,100 +44,101 @@
     --box-shadow: 0 2rem 3rem var(--color-light);
 }
 
+/* Classe .cliente */
 .cliente {
     display: grid;
-    width: 96%;
+    width: 100%;
     margin: 0 auto;
     gap: 1.8rem;
     grid-template-columns: 14rem auto 23rem;
 }
 
-.add-button{
+/* Classe .add-button */
+.add-button {
     display: flex;
     cursor: pointer;
-    color: #7380ec ;
+    color: #046ba3 ;
     background-color: rgba(255, 0, 0, 0);
-    /* justify-content: center; */
-
 }
 
-.add-button p{
+.add-button p {
     background-color: transparent;
     align-self: center;
     color: #181a1e;
 }
 
-.details{
-    color:#7380ec;
+/* Classe .details */
+.details {
+    color: #046ba3;
     cursor: pointer;
 }
 
-.middle{
+/* Classe .container */
+.container {
+    display: grid;
+    width: 100%;
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 14rem auto 23rem;
+}
+
+/* Classe .middle */
+.middle {
     position: relative;
     display: flex;
     width: 400px;
     justify-content: flex-start;
     flex-direction: row;
 }
-.container {
-    height: 100vh;
-    font-size: 14px !important; 
-    font-family: poppins, sans-serif;
-    display: flex;
-    margin: 0 auto;
-    gap: 1.8rem;
-    grid-template-columns: 14rem auto 23rem;
+
+/* Seletores gerais */
+
+a {
+    color: #181a1e;
+}
+
+img {
+    display: block;
     width: 100%;
-    padding: 1.5%;
-    width: 100%;
 }
 
-main{
-    width: 100vw;
-
+h1 {
+    font-weight: 800;
+    font-size: 1.8rem;
 }
 
-.research{
-    display: flex;
-    width: 95%;
-    margin-left: 1%;
-    margin-bottom: 15px;
-    position: relative;
+h2 {
+    font-size: 1.4rem;
 }
 
-.research input::placeholder{
-    color: var(--color-info-dark);
+h3 {
+    font-size: 0.87rem;
 }
 
-.research input{
-    border-bottom: 0.5px solid black;
-    background-color: var(--color-background);
-    width: 250px;
-    border-radius: 5px;
-    text-align: center;
+h4 {
+    font-size: 0.8rem;
 }
 
-.research button{
-    cursor: pointer;
-    height: 25px;
-    width: 100px;
-    margin-left: 24px;
-    position: relative;
-    transition: 1.5s;
-    border-radius: 5px;
+h5 {
+    font-size: 0.77rem;
 }
 
-.research button:hover{
-    color: whitesmoke;
-    background-color: #035885;
+small {
+    font-size: 0.75rem;
 }
-
-
 
 .profile-photo {
-   width: 50px;
-   height: 50px;
-   border-radius: 50%;
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-photo-2 {
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    overflow: hidden;
 }
 
 .text-muted {
@@ -151,7 +155,6 @@ b {
 
 .primary {
     color: var(--color-primary);
-
 }
 
 .danger {
@@ -166,7 +169,11 @@ b {
     color: var(--color-warning);
 }
 
+/* Sidebar */
 
+aside {
+    height: 100vh;
+}
 
 aside .top {
     background: transparent;
@@ -184,8 +191,6 @@ aside.logo {
 aside .close {
     display: none;
 }
-
-/*sidebar*/
 
 aside .sidebar {
     background: transparent;
@@ -211,10 +216,20 @@ aside .sidebar a {
     transition: all 300ms ease;
 }
 
-.toggle-button {
+aside .sidebar a span {
+    font-size: 1.6rem;
+    transition: all 300ms ease;
+}
+
+aside .sidebar a:last-child {
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+}
+
+button.toggle-button {
     display: flex;
     color: var(--color-info-dark);
-    margin-left: 2rem;
     gap: 1rem;
     align-items: center;
     position: relative;
@@ -222,30 +237,9 @@ aside .sidebar a {
     transition: all 300ms ease;
 }
 
-
-aside .sidebar button {
-    cursor: pointer;
-    color: var(--color-info-dark);
-    background-color: transparent;
-
-}
-
-
-aside .sidebar a span {
-    font-size: 1.6rem;
-    transition: all 300ms ease;
-}
-
-aside .sidebar .toggle-button span {
-    font-size: 1.6rem;
-    transition: all 300ms ease;
-}
-
-
-
 aside .sidebar a.active {
     background: var(--color-light);
-    color: #035885;
+    color: var(--color-primary);
     margin-left: 0;
 }
 
@@ -253,23 +247,17 @@ aside .sidebar a.active:before {
     content: "";
     width: 6px;
     height: 100%;
-    background: #035885;
+    background: var(--color-primary);
 }
 
 aside .sidebar a.active span {
-    color: #035885;
+    color: var(--color-primary);
     margin-left: calc(1rem - 3px);
 }
 
 aside .sidebar a:hover {
-    color:#035885;
+    color: var(--color-primary);
 }
-
-aside .sidebar .toggle-button:hover {
-    color:#035885;
-    margin-left: 2rem;    
-}
-
 
 aside .sidebar a:hover span {
     margin-left: 1rem;
@@ -283,10 +271,11 @@ aside .sidebar .message-count {
     border-radius: var(--border-radius-1);
 }
 
+/* Main */
 
-/*==========MAIN==================*/
-
-
+main {
+    margin-top: 1.4rem;
+}
 
 main .date {
     display: inline-block;
@@ -308,9 +297,7 @@ main .insights {
     align-items: center;
 }
 
-
-
-main .insights>div {
+main .insights > div {
     background: var(--color-white);
     padding: var(--card-padding);
     border-radius: var(--card-border-radius);
@@ -319,25 +306,24 @@ main .insights>div {
     transition: all 300ms ease;
 }
 
-main .insights>div:hover {
+main .insights > div:hover {
     box-shadow: none;
 }
 
-main .insights>div span {
+main .insights > div span {
     background: var(--color-primary);
     border-radius: 50%;
 }
 
-
-main .insights>div.expenses span {
+main .insights > div.expenses span {
     background: #FFD400;
 }
 
-main .insights>div.income span {
+main .insights > div.income span {
     background: var(--color-sucess);
 }
 
-main .insights>div .middle {
+main .insights > div .middle {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -348,72 +334,19 @@ main .insights h3 {
     font-size: 1rem;
 }
 
-main .insights .progress {
-    position: relative;
-    width: 92px;
-    height: 92px;
-    border-radius: 50px;
-}
+/* Pedidos recentes */
 
-main .insights svg {
-    width: 4.5rem;
-    height: 4.5rem;
-}
-
-main .insights svg circle {
-    fill: none;
-    stroke: #046ba3;
-    stroke-width: 10;
-    stroke-linecap: round;
-    transform: translate(1px, 1px);
-    stroke-dasharray: 110;
-    stroke-dashoffset: 92;
-}
-
-
-main .insights .sales svg circle {
-    stroke-dashoffset: -30;
-    stroke-dasharray: 200;
-}
-
-main .insights .expenses svg circle {
-    stroke-dashoffset: -30;
-    stroke-dasharray: 160;
-}
-
-main .insights .income svg circle {
-    stroke-dashoffset: -30;
-    stroke-dasharray: 160;
-}
-
-main .insights .progress .number {
-    position: absolute;
-    top: 0;
-    left: 10px;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.number p{
-    position: absolute;
-    margin-bottom: 25px;
-    margin-right: 15px;
-}
-/* ===============Pedidos recentes========*/
-.recent-orders {
+main .recent-orders {
     margin-top: 2rem;
 }
 
-.recent-orders h2 {
+main .recent-orders h2 {
     margin-bottom: 0.8rem;
 }
 
 main .recent-orders table {
     background: var(--color-white);
-    width: 99%;
-    margin-left: 0.5%;
+    width: 100%;
     border-radius: var(--card-border-radius);
     padding: var(--card-padding);
     text-align: center;
@@ -439,10 +372,10 @@ main .recent-orders a {
     text-align: center;
     display: block;
     margin: 1rem auto;
-    color: #046ba3;
+    color: var(--color-primary);
 }
 
-/*=========RIGHT========*/
+/* Right */
 
 .right {
     margin-top: 1.4rem;
@@ -478,7 +411,7 @@ main .recent-orders a {
 }
 
 .right .theme-toggler span.active {
-    background: #046ba3;
+    background: var(--color-primary);
     color: white;
     border-radius: var(--border-radius-1);
 }
@@ -489,24 +422,13 @@ main .recent-orders a {
     text-align: right;
 }
 
-/*=====ATUALIZACACOES RECENTES=====*/
+/* Atualizações recentes */
 
 .right .recent-updates {
-    width: 360px;
-    margin-bottom: 3.0rem;
+    margin-top: 1rem;
 }
-
-.right .recent-updates-2 {
-    width: 360px;
-    margin-bottom: 30rem;
-}
-
 
 .right .recent-updates h2 {
-    margin-bottom: 0.8rem;
-}
-
-.right .recent-updates-2 h2 {
     margin-bottom: 0.8rem;
 }
 
@@ -518,19 +440,7 @@ main .recent-orders a {
     transition: all 300ms ease;
 }
 
-.right .recent-updates-2 .updates {
-    background: var(--color-white);
-    padding: var(--card-padding);
-    border-radius: var(--card-border-radius);
-    box-shadow: var(--box-shadow);
-    transition: all 300ms ease;
-}
-
 .right .recent-updates .updates:hover {
-    box-shadow: none;
-}
-
-.right .recent-updates-2 .updates:hover {
     box-shadow: none;
 }
 
@@ -541,16 +451,9 @@ main .recent-orders a {
     margin-bottom: 1rem;
 }
 
-.right .recent-updates-2 .updates .update {
-    display: grid;
-    grid-template-columns: 2.6rem auto;
-    gap: 1rem;
-    margin-bottom: 1rem;
-}
+/* Análise de vendas */
 
-/*========ANALISE DE VENDAS=======*/
 .right .sales-analytics {
-    width: 360px;
     margin-top: 2rem;
 }
 
@@ -585,7 +488,7 @@ main .recent-orders a {
 .right .sales-analytics .item .icon {
     padding: 0.6rem;
     color: var(--color-white);
-    background:#046ba3;
+    background: var(--color-primary);
     display: flex;
 }
 
@@ -599,19 +502,22 @@ main .recent-orders a {
 
 .right .sales-analytics .add-product {
     background: transparent;
-    border: 2px dashed #046ba3;
-    color:#046ba3;
+    border: 2px dashed var(--color-primary);
+    color: var(--color-primary);
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-
 .swal2-input {
     width: 100%;
 }
 
-.item{
+.swal2-select {
+    margin-bottom: 10px;
+}
+
+.item {
     cursor: pointer;
 }
 
@@ -620,18 +526,105 @@ main .recent-orders a {
     margin-bottom: 10px;
 }
 
-
 .my-swal-confirm-button {
     background-color: green;
     border-color: green;
     color: white;
 }
 
-/*====MEDIA QUERIES===================*/
+.modal-container {
+    margin-top: 2rem;
+}
+
+.modal-container .modal-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    margin-bottom: 1rem;
+}
+
+.modal-container .modal-table {
+    background: var(--color-white);
+    width: 100%;
+    margin-left: 0.5%;
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+}
+
+.modal-container .modal-table:hover {
+    box-shadow: none;
+}
+
+.modal-container .modal-table tbody td {
+    height: 2.8rem;
+    border-bottom: 1px solid var(--color-light);
+    color: var(--color-dark-variant);
+}
+
+.modal-container .modal-table tbody tr:last-child td {
+    border: none;
+}
+
+.modal-container .modal-button {
+    text-align: center;
+    display: block;
+    margin: 1rem auto;
+    color: #046ba3;
+    font-size: 20px;
+    background-color: transparent;
+}
+
+.analysis-modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12rem;
+    background: var(--color-white);
+    height: 60%;
+    width: 60%;
+    margin-left: 19%;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+}
+
+.analysis-modal:hover {
+    box-shadow: none;
+}
+
+.analysis-modal h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    margin-bottom: 1rem;
+}
+
+.analysis-modal .analysis-button {
+    text-align: center;
+    display: block;
+    margin: 1rem auto;
+    color: #046ba3;
+    font-size: 20px;
+    background-color: transparent;
+}
+
+/* Media Queries */
 
 @media screen and (max-width: 1200px) {
+    .container {
+        width: 94%;
+    }
 
-   
+    aside .logo h2 {
+        display: none;
+    }
+
     aside .sidebar a {
         width: 5.6rem;
     }
@@ -657,26 +650,27 @@ main .recent-orders a {
     main .recent-orders table {
         width: 83vw;
     }
-
-    
 }
 
-/*========== MEDIA QUERIES ======*/
-
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
+    .sales{
+        max-width: 290px;
+    }
     .container {
         width: 100%;
         grid-template-columns: 1fr;
     }
 
+    .expenses{
+        max-width: 290px;
+    }
 
-    .profile-photo-2 {
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        margin-left: 300px;
-     }
-     
+    .income{
+        margin-bottom: 30px;
+        max-width: 290px;
+    }
+
+
 
     aside {
         position: fixed;
@@ -689,17 +683,6 @@ main .recent-orders a {
         padding-right: var(--card-padding);
         display: none;
         animation: showMenu 400ms ease forwards;
-    }
-
-    .insights{
-        display: none;
-    }
-
-   
-    @keyframes showMenu{
-        to{
-            left: 0;
-        }
     }
 
     aside .logo {
@@ -731,11 +714,11 @@ main .recent-orders a {
     }
 
     main {
-
         padding: 0 1rem;
+        display: flex;
+        flex-direction: column-reverse;
     }
-    
-   
+
     main .recent-orders {
         position: relative;
         width: 100%;
@@ -745,20 +728,6 @@ main .recent-orders a {
         width: 100%;
         margin: 0;
     }
-
-    .sales{
-        max-width: 310px;
-    }
-
-    .expenses{
-        max-width: 310px;
-    }
-
-    .income{
-        max-width: 310px;
-
-    }
-
 
     .right {
         width: 94%;
@@ -785,7 +754,6 @@ main .recent-orders a {
         left: 66%;
     }
 
-    
     .right .top button {
         display: inline-block;
         background: transparent;
@@ -799,5 +767,10 @@ main .recent-orders a {
         font-size: 2rem;
     }
 
-   
+    .recent-updates{
+        max-width: 325px;
+    }
+    .sales-analytics{
+        max-width: 350px;
+    }
 }

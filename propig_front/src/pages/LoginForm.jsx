@@ -5,9 +5,21 @@ import NavBarHomePage from "../components/NavBarHomePage";
 import Swal from "sweetalert2";
 
 function LoginForm({ tela }) {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isClosed, setIsClosed] = useState(false);
   const [cnpj, setCnpj] = useState("");
   const navigate = useNavigate();
 
+  const handleLogin = () => {
+    setIsLoggedIn(true);
+  };
+
+  const handleClose = () => {
+    setIsLoggedIn(false);
+    navigate("/");
+  };
+
+  // Formata o CNPJ adicionando pontos, barras e traço
   const formatCNPJ = (value) => {
     return value
       .replace(/\D/g, "") // Substitui qualquer caracter que não seja número por nada
@@ -28,7 +40,7 @@ function LoginForm({ tela }) {
     // Simulação de ação assíncrona
     setTimeout(() => {
       // Exibir mensagem de login bem-sucedido
-      if (tela === "cliente") {
+      if (tela === "Cliente") {
         Swal.fire({
           title: "Login realizado com sucesso",
           icon: "success",
@@ -38,7 +50,7 @@ function LoginForm({ tela }) {
         });
       } else {
         Swal.fire({
-          title: "Bem vindo ADM!",
+          title: "Bem-vindo ADM!",
           icon: "success",
         }).then(() => {
           // Redirecionar para a página de dashboard após o login
@@ -55,7 +67,7 @@ function LoginForm({ tela }) {
         <div className="login-form-2">
           <form className="login-form-2" onSubmit={handleSubmit}>
             <div className="close-btn">
-              <FaTimes />
+              <FaTimes onClick={handleClose} />
             </div>
             <h1>Login</h1>
             <input

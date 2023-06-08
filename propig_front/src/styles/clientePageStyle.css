@@ -24,6 +24,10 @@
 }
 
 
+
+
+
+
 .main-cliente {
     height: 100vh;
     font-size: 14px !important;
@@ -38,6 +42,10 @@
     margin-left: 1%;
     margin-bottom: 15px;
     position: relative;
+}
+
+.entidade-logo{
+    margin-left: 34px;
 }
 
 .research input::placeholder {

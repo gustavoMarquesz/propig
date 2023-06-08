@@ -14,12 +14,12 @@ function Footer() {
   
   const formatCNPJ = (value) => {
     return value
-      .replace(/\D/g, "") // Substitui qualquer caracter que não seja número por nada
+      .replace(/\D/g, "") 
       .replace(/(\d{2})(\d)/, "$1.$2")
       .replace(/(\d{3})(\d)/, "$1.$2")
       .replace(/(\d{3})(\d)/, "$1/$2")
       .replace(/(\d{4})(\d{1,2})/, "$1-$2")
-      .replace(/(-\d{2})\d+?$/, "$1"); // Captura 2 dígitos seguidos de um traço e não deixa ser digitado mais nada
+      .replace(/(-\d{2})\d+?$/, "$1"); 
   };
 
   const handleCNPJChange = (e) => {
@@ -28,10 +28,6 @@ function Footer() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Aqui você pode adicionar a lógica para enviar a mensagem usando o CNPJ e os outros dados do formulário
-    // Por exemplo:
-    console.log("CNPJ:", cnpj);
-    // Faça o necessário para enviar a mensagem e definir a variável messageSent como true
     Swal.fire("Sucesso!", "Mensagem enviada com sucesso!", "success");
   };
 

@@ -13,20 +13,15 @@ import Swal from 'sweetalert2'
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 function ConfgPage() {
-    // Estado para armazenar o tema (light ou dark) do perfil do cliente
     const [theme, setTheme] = useLocalStorage('theme' ? 'dark' : 'light')
-    // Estado para armazenar o CNPJ do cliente
     const [cnpj, setCNPJ] = useState("");
-    // Estado para armazenar uma mensagem de salvamento
     const [saveMessage, setSaveMessage] = useState("");
 
-    // Função para alternar o tema entre light e dark
     const toggleMode = () => {
         const newTheme = theme === 'light' ? 'dark' : 'light';
         setTheme(newTheme)
     }
 
-    // Função para lidar com o envio do formulário
     const handleSubmit = (e) => {
         e.preventDefault();
         Swal.fire(
@@ -36,30 +31,26 @@ function ConfgPage() {
         )
     }
 
-    // Função para formatar o CNPJ inserido pelo usuário
     const formatCNPJ = (value) => {
         return value
-            .replace(/\D/g, '') // Remove caracteres não numéricos
-            .replace(/(\d{2})(\d)/, '$1.$2') // Adiciona ponto após os primeiros dois dígitos
-            .replace(/(\d{3})(\d)/, '$1.$2') // Adiciona ponto após os próximos três dígitos
-            .replace(/(\d{3})(\d)/, '$1/$2') // Adiciona barra após os próximos três dígitos
-            .replace(/(\d{4})(\d{1,2})/, '$1-$2') // Adiciona traço após os próximos quatro dígitos
-            .replace(/(-\d{2})\d+?$/, '$1') // Remove qualquer dígito além dos dois últimos com traço
-    }
+            .replace(/\D/g, '') 
+            .replace(/(\d{2})(\d)/, '$1.$2') 
+            .replace(/(\d{3})(\d)/, '$1.$2') 
+            .replace(/(\d{3})(\d)/, '$1/$2') 
+            .replace(/(\d{4})(\d{1,2})/, '$1-$2') 
+            .replace(/(-\d{2})\d+?$/, '$1') 
+    }     
 
-    // Função para lidar com a mudança do CNPJ no campo de input
     const handleCNPJChange = (e) => {
         setCNPJ(formatCNPJ(e.target.value))
     }
 
-    // Estados para armazenar informações de endereço
     const [cep, setCep] = useState("");
     const [bairro, setBairro] = useState("");
     const [cidade, setCidade] = useState("");
     const [estado, setEstado] = useState("");
     const [rua, setRua] = useState("");
 
-    // Função para lidar com a mudança do CEP no campo de input
     const handleCepChange = async (e) => {
         setCep(e.target.value);
 
@@ -76,7 +67,6 @@ function ConfgPage() {
         }
     }
 
-    // Função para lidar com o logout do usuário
     const handleLogout = () => {
         Swal.fire({
             title: 'Deseja fazer logout?',

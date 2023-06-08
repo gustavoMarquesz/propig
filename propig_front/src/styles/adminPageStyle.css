@@ -80,6 +80,7 @@
     margin: 0 auto;
     gap: 1.8rem;
     grid-template-columns: 14rem auto 23rem;
+    padding: 2%;
 }
 
 /* Classe .middle */
@@ -173,6 +174,9 @@ b {
 
 aside {
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 }
 
 aside .top {
@@ -196,7 +200,7 @@ aside .sidebar {
     background: transparent;
     display: flex;
     flex-direction: column;
-    height: 86vh;
+    height: 500px;
     position: relative;
     top: 3rem;
 }
@@ -227,6 +231,7 @@ aside .sidebar a:last-child {
     width: 100%;
 }
 
+
 button.toggle-button {
     display: flex;
     color: var(--color-info-dark);
@@ -247,16 +252,20 @@ aside .sidebar a.active:before {
     content: "";
     width: 6px;
     height: 100%;
-    background: var(--color-primary);
+    background: #035885;
+}
+
+.active h3{
+    color:#035885;
 }
 
 aside .sidebar a.active span {
-    color: var(--color-primary);
+    color: #035885;
     margin-left: calc(1rem - 3px);
 }
 
 aside .sidebar a:hover {
-    color: var(--color-primary);
+    color: #046ba3;
 }
 
 aside .sidebar a:hover span {
@@ -264,7 +273,7 @@ aside .sidebar a:hover span {
 }
 
 aside .sidebar .message-count {
-    background: var(--color-primary-variant);
+    background: #046ba3;
     color: var(--color-white);
     padding: 2px 10px;
     font-size: 12px;
@@ -296,6 +305,8 @@ main .insights {
     gap: 1.6rem;
     align-items: center;
 }
+
+
 
 main .insights > div {
     background: var(--color-white);
@@ -334,7 +345,62 @@ main .insights h3 {
     font-size: 1rem;
 }
 
+main .insights .progress {
+    position: relative;
+    width: 92px;
+    height: 92px;
+    border-radius: 50px;
+}
+
+main .insights svg {
+    width: 4.5rem;
+    height: 4.5rem;
+}
+
+main .insights svg circle {
+    fill: none;
+    stroke: #046ba3;
+    stroke-width: 10;
+    stroke-linecap: round;
+    transform: translate(1px, 1px);
+    stroke-dasharray: 110;
+    stroke-dashoffset: 92;
+}
+
+
+main .insights .sales svg circle {
+    stroke-dashoffset: -30;
+    stroke-dasharray: 200;
+}
+
+main .insights .expenses svg circle {
+    stroke-dashoffset: -30;
+    stroke-dasharray: 160;
+}
+
+main .insights .income svg circle {
+    stroke-dashoffset: -30;
+    stroke-dasharray: 160;
+}
+
+main .insights .progress .number {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.number p{
+    position: absolute;
+    margin-bottom: 25px;
+    margin-right: 15px;
+}
+
 /* Pedidos recentes */
+
 
 main .recent-orders {
     margin-top: 2rem;

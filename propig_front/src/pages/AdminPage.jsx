@@ -169,12 +169,11 @@ function AdminPage() {
             cancelButtonText: "Cancelar",
             showLoaderOnConfirm: true,
             preConfirm: (message) => {
-                // Implemente sua lógica para enviar a mensagem aqui
-                console.log("Mensagem enviada:", message);
                 return new Promise((resolve) => {
                     setTimeout(() => {
                         resolve();
-                    }, 2000); // Simulando o envio da mensagem com um atraso de 2 segundos
+                    }, 2000); 
+                    
                 });
             },
         })
@@ -203,11 +202,11 @@ function AdminPage() {
             cancelButtonText: "Cancelar",
             showLoaderOnConfirm: true,
             preConfirm: (message) => {
-                console.log("Relatório enviado:", message);
                 return new Promise((resolve, reject) => {
                     setTimeout(() => {
                         resolve();
-                    }, 2000); // Simulando o envio do relatório com um atraso de 2 segundos
+                    }, 2000); 
+                    
                 });
             },
         })
@@ -369,12 +368,6 @@ function AdminPage() {
             <NavBarAdmin />
             <div className="container" data-theme={theme}>
                 <aside>
-                    <div className="top">
-                        <div className="logo">
-                            <h2 className="text-muted">ADM</h2>
-                        </div>
-                        <div className="close" id="close-btn"><span className="material-symbols-sharp">close</span></div>
-                    </div>
                     <div className="sidebar">
                         <a className="toggle-button" onClick={toggleMode}>
                             <span className="material-symbols-sharp"><TipsAndUpdatesSharpIcon /></span>
@@ -391,7 +384,6 @@ function AdminPage() {
                             <h3>Pedidos</h3>
                         </a>
 
-                        {/* Modal de Pedidos */}
                         <Modal
                             isOpen={modalIsOpen}
                             onRequestClose={() => setModalIsOpen(false)}
@@ -461,7 +453,7 @@ function AdminPage() {
                             <span className="material-symbols-sharp"><SettingsIcon /></span>
                             <h3>Configurações</h3>
                         </a>
-                        <Link  onClick={handleLogout}>
+                        <Link className="sair"  onClick={handleLogout}>
                             <span className="material-symbols-sharp"><ExitToApp /></span>
                             <h3>Sair</h3>
                         </Link>

@@ -1,11 +1,9 @@
-// Importando as bibliotecas e arquivos necessários
-import { useEffect, useState } from "react" // O famoso React
-import Swal from 'sweetalert2'; // Biblioteca para exibir pop-ups bonitos
-import { Link } from "react-router-dom" // Para criar links de navegação
-import useLocalStorage from 'use-local-storage' // Para armazenar dados no local storage
-import ClientePage from '../styles/clientePageStyle.css' // Arquivo de estilo para a página
+import { useEffect, useState } from "react" 
+import Swal from 'sweetalert2'; 
+import { Link } from "react-router-dom" 
+import useLocalStorage from 'use-local-storage' 
+import ClientePage from '../styles/clientePageStyle.css'
 
-// Importando as imagens e ícones
 import ProfileUm from "../assets/profile-1.jpg"
 import ProfileDois from "../assets/profile-2.jpeg"
 import ProfileTres from "../assets/profile-3.jpeg"
@@ -14,9 +12,8 @@ import Logo from '../assets/logo.png'
 import ProfileClient from '../assets/profileclient.jpeg'
 import MenuIcon from '@mui/icons-material/Menu';
 
-import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component" // Componente de linha do tempo vertical
+import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component" 
 
-// Importando ícones do Material-UI
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 import SellIcon from '@mui/icons-material/Sell';
 import MovingIcon from '@mui/icons-material/Moving';
@@ -38,9 +35,9 @@ import NavBarClient from "../components/NavBarClient";
 import LogoutSharpIcon from '@mui/icons-material/LogoutSharp';
 
 function ClientPage() {
-    const [dataHora, setDataHora] = useState(new Date()); // Estado para armazenar a data e hora atual
-    const [theme, setTheme] = useLocalStorage('theme' ? 'dark' : 'light') // Estado para armazenar o tema escolhido pelo usuário (armazenado no local storage)
-    let [data, setData] = useState([ // Estado para armazenar informações fictícias de pedidos
+    const [dataHora, setDataHora] = useState(new Date()); 
+    const [theme, setTheme] = useLocalStorage('theme' ? 'dark' : 'light') 
+    let [data, setData] = useState([ 
         {
             numeroDoPedido: '#254688',
             Rastreamento: '8586223413',
@@ -98,13 +95,13 @@ function ClientPage() {
     ])
 
     const toggleMode = () => {
-        const newTheme = theme === 'light' ? 'dark' : 'light'; // Alterna entre o tema "light" e "dark"
-        setTheme(newTheme); // Atualiza o estado do tema
+        const newTheme = theme === 'light' ? 'dark' : 'light'; 
+        setTheme(newTheme); 
     };
 
 
     const handleLogout = () => {
-        Swal.fire({ // Exibe um pop-up de confirmação usando a biblioteca Swal
+        Swal.fire({ 
             title: 'Deseja fazer logout?',
             icon: 'question',
             showCancelButton: true,
@@ -114,7 +111,7 @@ function ClientPage() {
             cancelButtonText: 'Não'
         }).then((result) => {
             if (result.isConfirmed) {
-                window.location.href = "/"; // Redireciona para a página inicial ao confirmar o logout
+                window.location.href = "/"; 
             }
         });
     };
@@ -122,13 +119,12 @@ function ClientPage() {
     return (
         <section  data-theme={theme}>
            <div className="div-menu-configs">
-                <NavBarClient /> {/* Componente da barra de navegação para o cliente */}
-                <Link to="/config" className="link-config">Config</Link>
+                <NavBarClient />
            </div>
             <div className="container">
                 <aside>
                     <div className="top">
-                        <div className="logo">
+                        <div className="entidade-logo">
                             <h2 className="text-muted">Cliente</h2>
                         </div>
                         <div className="close" id="close-btn">
@@ -272,4 +268,4 @@ function ClientPage() {
     );
 }
 
-export default ClientPage; // Exporta o componente para uso em outros arquivos
+export default ClientPage; 

@@ -19,15 +19,14 @@ function LoginForm({ tela }) {
     navigate("/");
   };
 
-  // Formata o CNPJ adicionando pontos, barras e traço
   const formatCNPJ = (value) => {
     return value
-      .replace(/\D/g, "") // Substitui qualquer caracter que não seja número por nada
+      .replace(/\D/g, "") 
       .replace(/(\d{2})(\d)/, "$1.$2")
       .replace(/(\d{3})(\d)/, "$1.$2")
       .replace(/(\d{3})(\d)/, "$1/$2")
       .replace(/(\d{4})(\d{1,2})/, "$1-$2")
-      .replace(/(-\d{2})\d+?$/, "$1"); // Captura 2 dígitos seguidos de um traço e não deixa ser digitado mais nada
+      .replace(/(-\d{2})\d+?$/, "$1"); 
   };
 
   const handleCNPJChange = (e) => {
@@ -37,15 +36,12 @@ function LoginForm({ tela }) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Simulação de ação assíncrona
     setTimeout(() => {
-      // Exibir mensagem de login bem-sucedido
       if (tela === "Cliente") {
         Swal.fire({
           title: "Login realizado com sucesso",
           icon: "success",
         }).then(() => {
-          // Redirecionar para a página de cliente após o login
           navigate("/cliente");
         });
       } else {
@@ -53,7 +49,6 @@ function LoginForm({ tela }) {
           title: "Bem-vindo ADM!",
           icon: "success",
         }).then(() => {
-          // Redirecionar para a página de dashboard após o login
           navigate("/dashboard");
         });
       }

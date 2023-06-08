@@ -6,7 +6,6 @@ import InputMask from 'react-input-mask';
 import NavBarHomePage from "../components/NavBarHomePage";
 
 function RegisterPage() {
-  // Estados para os campos do formulário
   const [cnpj, setCnpj] = useState('');
   const [loja, setLoja] = useState('');
   const [email, setEmail] = useState('');
@@ -19,7 +18,6 @@ function RegisterPage() {
   const [cidade, setCidade] = useState('');
   const [estado, setEstado] = useState('');
 
-  // Função para lidar com o envio do formulário
   const handleSubmit = (event) => {
     event.preventDefault();
     Swal.fire({
@@ -30,29 +28,26 @@ function RegisterPage() {
     });
   };
 
-  // Função para formatar o CNPJ
   const formatarCNPJ = (cnpj) => {
     cnpj = cnpj.replace(/\D/g, '');
 
     if (cnpj.length > 14) {
-      cnpj = cnpj.slice(0, 14); // Limita a 14 dígitos
+      cnpj = cnpj.slice(0, 14); 
     }
 
-    cnpj = cnpj.replace(/(\d{2})(\d)/, '$1.$2'); // Insere ponto após o segundo dígito
-    cnpj = cnpj.replace(/(\d{3})(\d)/, '$1.$2'); // Insere ponto após o quinto dígito
-    cnpj = cnpj.replace(/(\d{3})(\d)/, '$1/$2'); // Insere barra após o oitavo dígito
-    cnpj = cnpj.replace(/(\d{4})(\d)/, '$1-$2'); // Insere hífen após o 12º dígito
+    cnpj = cnpj.replace(/(\d{2})(\d)/, '$1.$2'); 
+    cnpj = cnpj.replace(/(\d{3})(\d)/, '$1.$2'); 
+    cnpj = cnpj.replace(/(\d{3})(\d)/, '$1/$2'); 
+    cnpj = cnpj.replace(/(\d{4})(\d)/, '$1-$2'); 
 
     return cnpj;
   };
 
-  // Função para lidar com a mudança do CNPJ
   const handleCnpjChange = (event) => {
     const formattedCnpj = formatarCNPJ(event.target.value);
     setCnpj(formattedCnpj);
   };
 
-  // Função para lidar com a mudança do CEP
   const handleCepChange = async (e) => {
     setCep(e.target.value);
 

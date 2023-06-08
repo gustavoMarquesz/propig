@@ -19,9 +19,6 @@ function NavBarAdmin(){
 
     return(
         <section className="navbar-admin" id={expandNavbar ? "open" : "close"}>
-            <div>
-                <button className="button-nav" onClick={() => setExpandNavbar((prev)=> !prev)}> <MenuIcon/> </button>
-            </div>
             <div className="links">
                 <div>
                     <Link className="link" to="/"> <img className="propig-imagem" src={Logo}/> </Link>

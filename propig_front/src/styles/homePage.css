@@ -13,7 +13,7 @@
 
 
 
-.area-propigs {
+/* .area-propigs {
   gap: 25px;
   min-height: 400px;
   background-color: #035885;
@@ -22,7 +22,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-}
+} */
 
 .middle-2 {
   display: flex;
@@ -391,10 +391,10 @@
   
 .area-propigs {
   gap: 25px;
-  min-height: 100vh;
+  height: 120%;
   background-image: url("../assets/propigs.webp");
   background-repeat: no-repeat;
-  background-size: 99.9%;
+  background-size: 100% 100%;
   color: white;
   display: flex;
   flex-direction: column;
@@ -411,11 +411,13 @@
 
 .area-propigs h1{
   font-size: 70px;
+  margin-top: 50px;
 }
 
 .area-propigs h4{
   font-size: 25px;
   width: 400px;
+  margin-bottom: 150px;
   text-align: start;
 }
 

@@ -1,29 +1,26 @@
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
-import timeLine from "../styles/timeLine.css"; // Estilos do componente de linha do tempo
-import CheckCircleIcon from '@mui/icons-material/CheckCircle'; // Ícone de círculo de verificação do Material UI
-import { MapsHomeWork } from "@mui/icons-material"; // Ícone de casa do Material UI
-import "react-vertical-timeline-component/style.min.css"; // Estilos adicionais do componente de linha do tempo
-import LocalShippingIcon from '@mui/icons-material/LocalShipping'; // Ícone de transporte do Material UI
-import adressIcons from "../assets/adressIcons.svg"; // Ícones de endereço
-import { useState } from "react"; // Importação do useState para manipulação de estado
-import NavBarAdmin from "../components/NavBarAdmin"; // Barra de navegação para administração
+import timeLine from "../styles/timeLine.css"; 
+import CheckCircleIcon from '@mui/icons-material/CheckCircle'; 
+import { MapsHomeWork } from "@mui/icons-material"; 
+import "react-vertical-timeline-component/style.min.css"; 
+import LocalShippingIcon from '@mui/icons-material/LocalShipping'; 
+import adressIcons from "../assets/adressIcons.svg"; 
+import { useState } from "react"; 
+import NavBarAdmin from "../components/NavBarAdmin"; 
 
 function AdminTimeLine(){
 
-    const [status, setStatus] = useState([]); // Estado para armazenar o status
-    const [titleStatus, setTitleStatus] = useState(""); // Estado para armazenar o título do status
-    const [descriptionOne, setDescriptionOne] = useState(""); // Estado para armazenar a primeira descrição
-    const [descriptionTwo, setDescriptionTwo] = useState(""); // Estado para armazenar a segunda descrição
-    const [idCounter, setIdCounter] = useState(0); // Contador de ID para cada status
-
-    const handleSubmit = (e) =>{ // Função para lidar com o envio do formulário
+    const [status, setStatus] = useState([]); 
+    const [titleStatus, setTitleStatus] = useState(""); 
+    const [descriptionOne, setDescriptionOne] = useState(""); 
+    const [descriptionTwo, setDescriptionTwo] = useState(""); 
+    const [idCounter, setIdCounter] = useState(0); 
+    
+    const handleSubmit = (e) =>{ 
         e.preventDefault();
-        const statusList = {id: idCounter, titleStatus, descriptionOne, descriptionTwo}; // Objeto contendo as informações do status
-
-        setStatus([...status, statusList]); // Atualiza o estado com o novo status adicionado
-        setIdCounter(idCounter+1); // Incrementa o contador de ID
-        console.log(statusList.id);
-        console.log(status);
+        const statusList = {id: idCounter, titleStatus, descriptionOne, descriptionTwo}; 
+        setStatus([...status, statusList]); 
+        setIdCounter(idCounter+1); 
     }
    
     return(
@@ -113,14 +110,9 @@ function AdminTimeLine(){
 
                         </VerticalTimelineElement>
                     ))}
-                                        
-                    
-                
                 </VerticalTimeline>
-
                 </div>
            </div>
-
         </section>
     )
 
